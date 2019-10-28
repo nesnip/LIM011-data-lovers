@@ -7,9 +7,9 @@ export const showPotterCharacters = (data) => {
   data.map(obj => {
     templatePotter += `
     <div class="card">
-        <img src = '${obj.image}' class="card-img-top"/>
-      <div class="card-body">
-        <p class="card-title">${obj.name}</p>
+        <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
+      <div class="container">
+        <p>${obj.name}</p>
       </div>
     </div>`;
   });
