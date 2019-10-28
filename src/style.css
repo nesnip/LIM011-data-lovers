@@ -1,6 +1,7 @@
 body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 100%;
+    background-repeat: round;
 }
 
 .HPLogo {
@@ -9,18 +10,29 @@ body {
    margin:auto;
 }
 
+.photoCharacter {
+    display: inline-block;
+    outline: 1px solid red;
+    width: 105%;
+    height: 200px;
+}
+
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  width: auto;
-  height: auto;
-  max-width: 100px;
-  /* max-height: 100px; */
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #778899;
+  margin: 28px;
+  padding: 70px;
+  border-radius: 10px ;
+  transition: 0.3s;
+  width: 12%;
+  float: left;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  
+}
+
+.container {
+  padding: 2px 16px;
 }
