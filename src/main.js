@@ -3,10 +3,11 @@
  * import LoL from './data/lol/lol.js'
  * import POTTER from './data/potter/potter.js'
  */
+import POTTER from './data/potter/potter.js';
+console.log(POTTER);
 
-import { example } from './data.js';
-
-console.log(example);
+import {showPotterCharacters} from './data.js';
+document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(POTTER);
 
 /*
  * console.log(POKEMON);
