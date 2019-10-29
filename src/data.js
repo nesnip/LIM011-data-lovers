@@ -6,8 +6,8 @@ export const showPotterCharacters = (data) => {
   let templatePotter = '';
   data.map((obj) => {
     templatePotter += `
-    <div class="card hide" id="cardCharacter">
-        <img src="${obj.image}" alt="Image" class="photoCharacter"/>
+    <div class="card flex-container">
+        <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
       <div class="container">
         <p>${obj.name}</p>
       </div>
