@@ -6,43 +6,31 @@ export const showPotterCharacters = (data) => {
   let templatePotter = '';
   data.map((obj) => {
     templatePotter += `
-    <div class="card flex-container">
-        <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
-      <div class="container">
-        <p>${obj.name}</p>
+    <div class="card flex-container flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
+          <div class="container">
+            <p class="fontNameCharacter">${obj.name}</p>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <h1>${obj.name}</h1>
+          <p>Nacimiento: ${obj.dateOfBirth}</p>
+          <p>Especie: ${obj.species}</p>
+          <p>Estatus de sangre: ${obj.ancestry}</p>
+          <p>Casa: ${obj.house}</p>
+          <p>Patronus: ${obj.patronus}</p>
+          <p>Varita:</p>
+          <p>Madera: ${obj.wand.wood}</p>
+          <p>Núcleo: ${obj.wand.core}</p>
+          <p>Largo: ${obj.wand.length}</p>
+          <p>Ocupación:</p>
+          <p>Actor: ${obj.actor}</p>
+        </div>
       </div>
     </div>`;
   });
   return templatePotter;
 };
 
-/* export const showPotterCharacters = (data) => {
-  return data
-    .map((obj) => (`
-      <div class="card">
-          <img src="${obj.image}" alt="Image" class="photoCharacter"/>
-        <div class="container">
-          <p>${obj.name}</p>
-        </div>
-      </div>`
-    ))
-    .join('');
-}; */
-
-export const showPotterDescription = (data2) => {
-  let templatePotter2 = '';
-  data2.map((obj) => {
-    templatePotter2 += `
-    <div class="card hide" id="cardDescription">
-      <div class="container">
-        <h2>${obj.name}</h2>
-        <p>Especie: ${obj.species}</p>
-        <p>Status de sangre: ${obj.ancestry}</p>
-        <p>Casa: ${obj.house}</p>
-        <p>Patronus: ${obj.patronus}</p>
-        <p>Actor: ${obj.actor}</p>
-      </div>
-    </div>`;
-  });
-  return templatePotter2;
-};
