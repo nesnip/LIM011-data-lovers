@@ -10,29 +10,47 @@ body {
    margin:auto;
 }
 
+#filterSelection {
+  align-items: center;
+  background: #300E4A;
+  border-radius: 7px;
+  border-color: #300E4A;
+  color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.flex-container {
+  justify-content: center;
+}
+
+
 .photoCharacter {
     display: inline-block;
-    outline: 1px solid red;
-    width: 105%;
-    height: 200px;
+    outline: 1px solid transparent;
+    width: 80%;
+    height: 180px;
 }
 
 .card {
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color: #778899;
-  margin: 28px;
-  padding: 70px;
-  border-radius: 10px ;
   transition: 0.3s;
   width: 12%;
-  float: left;
+  /*font-family: "Marcellus SC", Times, serif; */
+  font-size: 14.5px;
+  text-align: center;
+  padding: 60px;
+  margin: 30px;
+  background-color: rgba(119, 136, 153, 0.95);
+  border-radius: 10px;
+  float: left; 
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.container {
+
+/*.container {
   padding: 2px 16px;
-}
+}*/
+
