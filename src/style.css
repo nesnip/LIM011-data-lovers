@@ -39,12 +39,13 @@ body {
 }
 
 #filterSelection {
-  align-items: center;
+  text-align: center;
   background: #300E4A;
   border-radius: 7px;
   border-color: #300e4a;
   color: #ffffff;
   padding: 10px;
+  width: 180px;
 } 
 
 #filterCategories {
