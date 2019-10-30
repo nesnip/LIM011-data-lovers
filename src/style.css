@@ -2,10 +2,34 @@
   font-family: 'Marcellus SC';
 }
 
+p {
+  font-size: 1.000em;
+  margin: 9px; 
+  margin-left: 30px;
+}
+
+li {
+  font-size: 0.813em;
+  margin-left: 90px;
+}
+
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center; 
+}
+
 body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 100%;
-    background-repeat: round;
+    background-attachment: fixed;
 }
 
 .HPLogo {
@@ -18,10 +42,17 @@ body {
   align-items: center;
   background: #300E4A;
   border-radius: 7px;
-  border-color: #300E4A;
+  border-color: #300e4a;
   color: #ffffff;
   padding: 10px;
-  margin: 5px;
+} 
+
+#filterCategories {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 180px;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .flex-container {
@@ -34,15 +65,14 @@ body {
     width: 55%;
     height: 210px;
     margin-top: 65px;
-
 }
 
 .flip-card {
   width: 300px;
   height: 300px;
   perspective: 1000px;
-  padding:20px;
-  margin: 35px;
+  padding: 20px;
+  margin-bottom: 95px;
   float: left;
 }
 
@@ -53,7 +83,7 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-
+  margin-left: 155px;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -78,10 +108,4 @@ body {
   transform: rotateY(180deg);
   background-color: rgba(119,136,153,0.95);
   text-align: justify;
-}
-
-.fontNameCharacter {
-  font-size: 25px;
-  color: #ffffff;
-  text-align: center;
 }

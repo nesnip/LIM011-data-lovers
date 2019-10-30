@@ -10,8 +10,8 @@ export const showPotterCharacters = (data) => {
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
-          <div class="container">
-            <p class="fontNameCharacter">${obj.name}</p>
+          <div>
+            <h2 class="fontNameCharacter">${obj.name}</h2>
           </div>
         </div>
         <div class="flip-card-back">
@@ -22,9 +22,9 @@ export const showPotterCharacters = (data) => {
           <p>Casa: ${obj.house}</p>
           <p>Patronus: ${obj.patronus}</p>
           <p>Varita:</p>
-          <p>Madera: ${obj.wand.wood}</p>
-          <p>Núcleo: ${obj.wand.core}</p>
-          <p>Largo: ${obj.wand.length}</p>
+          <li>Madera: ${obj.wand.wood}</li>
+          <li>Núcleo: ${obj.wand.core}</li>
+          <li>Largo: ${obj.wand.length}</li>
           <p>Ocupación:</p>
           <p>Actor: ${obj.actor}</p>
         </div>
