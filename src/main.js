@@ -15,7 +15,7 @@ console.log(filterSelection);
 
 filterSelection.addEventListener('change', () => {
   if (filterSelection.value == 'A-Z') {
-    const arrAsc = [...POTTER];
+    const arrAsc = [...POTTER]; //... operador que junta los elementos de un array en un nuevo array
     const names = arrAsc.map(item => item.name);
     const orderedNames = names.sort();
     const objects = orderedNames.map(name => [...POTTER].find(it => it.name === name));
