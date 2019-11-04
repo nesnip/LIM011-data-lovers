@@ -15,12 +15,12 @@ console.log(filterSelection);
 
 filterSelection.addEventListener('change', () => {
   if (filterSelection.value == 'A-Z') {
-    const arrAsc = [...POTTER]; //... operador que junta los elementos de un array en un nuevo array
-    const names = arrAsc.map(item => item.name);
-    const orderedNames = names.sort();
-    const objects = orderedNames.map(name => [...POTTER].find(it => it.name === name));
-    console.log(objects);
-    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(objects);
+    const arrAsc = [...POTTER] //... operador que junta los elementos de un array en un nuevo array
+    .map(item => item.name)
+    .sort()
+    .map(name => [...POTTER].find(it => it.name === name));
+    console.log(arrAsc);
+    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(arrAsc);
   } else if (filterSelection.value == 'Z-A') {
     const arrDesc = [...POTTER].map(item => item.name)
       .sort().reverse()
@@ -49,9 +49,7 @@ filterSelection.addEventListener('change', () => {
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredHufflepuff);
   } else if (filterSelection.value == 'Ravenclaw') {
     const filteredRavenclaw = [...POTTER].filter(item => item.house === 'Ravenclaw');
-    console.log(filteredRavenclaw); 
+    console.log(filteredRavenclaw);
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredRavenclaw);
   }
-  // console.log(e.target.value);
-  console.log('hola');
 });
