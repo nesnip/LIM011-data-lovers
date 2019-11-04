@@ -20,7 +20,6 @@ filterSelection.addEventListener('change', () => {
     const orderedNames = names.sort();
     const objects = orderedNames.map(name => [...POTTER].find(it => it.name === name));
     console.log(objects);
-    console.log('soy un bonito mensaje');
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(objects);
   } else if (filterSelection.value == 'Z-A') {
     const arrDesc = [...POTTER].map(item => item.name)
@@ -28,6 +27,10 @@ filterSelection.addEventListener('change', () => {
       .map(name => [...POTTER].find(it => it.name === name));
     console.log(arrDesc);
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(arrDesc);
+  } else if (filterSelection.value == 'Estudiantes') {
+    const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
+    console.log(filteredStudents);
+    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredStudents);
   }
   // console.log(e.target.value);
   console.log('hola');
