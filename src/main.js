@@ -31,6 +31,13 @@ filterSelection.addEventListener('change', () => {
     const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
     console.log(filteredStudents);
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredStudents);
+  } else if (filterSelection.value == 'Profesores') {
+    const filteredProfesors = [...POTTER].filter(item => item.hogwartsStaff === true);
+    console.log(filteredProfesors);
+    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredProfesors);
+  } else if (filterSelection.value == '#insertPotterCharacter') {
+    const filteredGryffindor =  [...POTTER].filter(item => item.house == 'Gryffindor');
+    console.log(filteredGryffindor);
   }
   // console.log(e.target.value);
   console.log('hola');
