@@ -1,6 +1,27 @@
 * {
   font-family: 'Marcellus SC';
-  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 20px 5px;
+}
+
+#menu_general li:hover a, #menu_general li a:focus {
+  background-color: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
+}
+
+label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  position: fixed;
+  top: 0;
 }
 
 p {
@@ -9,7 +30,7 @@ p {
   margin-left: 30px;
 }
 
-li {
+#principalMenuCategorie {
   font-size: 0.813em;
   margin-left: 90px;
 }
@@ -30,8 +51,51 @@ h2 {
 body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+#principalMenuList {
+  list-style: none;
+  top: 70px;
+  width: 100%;
+  position: absolute;
+  font-size: 25px;
+}
+
+img {
+  width: 40px;
+}
+
+input[type='checkbox']
+{
+  display: none;
+}
+
+nav {
+  background-color: rgba(18, 18, 48, 0.91);
+  width: 350px;
+  height: 100%;
+  left: -350px;
+  position: absolute;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+}
+
+input[type='checkbox']:checked ~ nav {
+  transform: translateX(350px);
+}
+
+#subOption {
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: right 3px;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+
 
 .HPLogo {
    width: 45%;
