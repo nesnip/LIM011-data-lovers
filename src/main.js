@@ -51,7 +51,4 @@ filterSelection.addEventListener('change', () => {
     const filteredRavenclaw = [...POTTER].filter(item => item.house === 'Ravenclaw');
     console.log(filteredRavenclaw); 
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredRavenclaw);
-  }
-  // console.log(e.target.value);
-  console.log('hola');
-});
+  } });
