@@ -4,6 +4,8 @@
   padding: 0px;
 }
 
+/*Estilos de menu principal*/
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -24,35 +26,9 @@ label {
   top: 0;
 }
 
-p {
-  font-size: 1.000em;
-  margin: 9px; 
-  margin-left: 30px;
-}
-
 #principalMenuCategorie {
   font-size: 0.813em;
   margin-left: 90px;
-}
-
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center; 
-}
-
-body {
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #principalMenuList {
@@ -87,15 +63,90 @@ input[type='checkbox']:checked ~ nav {
   transform: translateX(350px);
 } 
 
-#subOption {
+/* Estilos de las sub categorias del menu principal*/
+
+/*#subOption {
   display: block;
   text-decoration: none;
   font-size: 15px;
   text-align: right 3px;
   line-height: 2.5rem;
   color: #ffffff;
+}*/
+
+#menu_general {
+  font-family: 'Marcellus SC';
+  width: 23vw;
+  margin:  0;
 }
 
+#menu_general ul {
+  list-style-type: none;
+}
+
+#menu_general > ul li {
+  background: none;
+}
+
+#menu_general li a {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+#menu_general li:hover a, #menu_general li a:focus {
+  background-color: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
+}
+
+#menu_general li ul {
+  height: 0;
+  overflow: hidden;
+}
+
+#menu_general li:hover ul, #menu_general li:focus ul {
+  height: auto;
+}
+
+#menu_general li:hover li a, #menu_general li:focus li a {
+  font-family: 'Marcellus SC';
+  font-size: 15px;
+  line-height: 5px;
+  border-top: 1px solid red;
+  background: white;
+}
+
+#menu_general li li a:hover, #menu_general li li a:focus{
+  background: yellow;
+}
+
+p {
+  font-size: 1.000em;
+  margin: 9px; 
+  margin-left: 30px;
+}
+
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center; 
+}
+
+body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .HPLogo {
    width: 45%;
