@@ -4,7 +4,9 @@
   padding: 0px;
 }
 
-/*Estilos de menu principal*/
+.hide {
+  display: none;
+}
 
 a {
   text-decoration: none;
@@ -26,9 +28,35 @@ label {
   top: 0;
 }
 
+p {
+  font-size: 1.000em;
+  margin: 9px;
+  margin-left: 30px;
+}
+
 #principalMenuCategorie {
   font-size: 0.813em;
   margin-left: 90px;
+}
+
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center;
+}
+
+body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #principalMenuList {
@@ -43,7 +71,7 @@ img {
   width: 40px;
 }
 
-input[type='checkbox'] 
+input[type='checkbox']
 {
   display: none;
 }
@@ -61,7 +89,7 @@ nav {
 
 input[type='checkbox']:checked ~ nav {
   transform: translateX(350px);
-} 
+}
 
 /* Estilos de las sub categorias del menu principal*/
 
@@ -124,7 +152,7 @@ input[type='checkbox']:checked ~ nav {
 
 p {
   font-size: 1.000em;
-  margin: 9px; 
+  margin: 9px;
   margin-left: 30px;
 }
 
@@ -138,7 +166,7 @@ h1 {
 h2 {
   font-size: 1.500em;
   color: #ffffff;
-  text-align: center; 
+  text-align: center;
 }
 
 body {
@@ -162,7 +190,7 @@ body {
   color: #ffffff;
   padding: 10px;
   width: 180px;
-} 
+}
 
 #filterCategories {
   display: flex;
@@ -200,7 +228,6 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  margin-left: 155px;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -225,4 +252,8 @@ body {
   transform: rotateY(180deg);
   background-color: rgba(119,136,153,0.95);
   text-align: justify;
+}
+
+ul {
+  list-style-type: none;
 }
