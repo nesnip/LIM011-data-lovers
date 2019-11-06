@@ -8,22 +8,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
 
-    <header>
+    <header id= 'principalMenu'>
     <input type='checkbox' id='chec'>
-    <label for="chec">
-      <img src="img\mdi_menu.png">
+    <label for="chec" id="axis" class="one">
+      <img class='object hamburguer move-right' src="img\mdi_menu.png">
     </label>
 
     <nav id="menu_general">
+
+        <div class="box">
+            <div class="container-4">
+              <input type="search" id="search" placeholder="Busca por nombre del personaje" />
+              <button class="icon"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+
      <ul id="principalMenuList">
        <li id="principalMenuCategorie"><a href="#">Ocupacion</a>
        <ul id="subCategories">
          <li id="subOption"><a href="#" id="subOption1">Estudiantes</a></li>
-         <li id="subOption"><a href="#" id="subOption1">Profesores</a></li>
+         <li id="subOption"><a href="#" id="subOption2">Profesores</a></li>
        </ul>
       </li>
        <li id="principalMenuCategorie"><a href="#">Varitas</a></li>
@@ -40,9 +49,8 @@
     </nav>
   </header>
 
-  <img src="img\LOGO HPW.png" class="HPLogo">
-
-  <div class="container">
+  <div id='principalContainer' class="container">
+    <img src="img\LOGO HPW.png" class="HPLogo">
     <div id="filterCategories">
       <select id="filterSelection">
         <option hidden selected> F I L T R O
@@ -61,12 +69,51 @@
           <option value="Ravenclaw"> Ravenclaw </option>
         </optgroup>
       </select>
-    </div>
+    </div> </div>
+
     <div id="root">
-      <div class="" id="insertPotterCharacter"></div>
-      <div class="hide" id="insertPotterOcupation"></div>
+
+      <div id="insertPotterCharacter"></div>
+
+    <div class="hide" id="insertPotterStudents">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+       <h1>Estudiantes</h1>
+    <div id="filterStudents">
+      <select id="secondFilter">
+        <option hidden selected> F I L T R O
+        <optgroup label="Ordenar">
+          <option value="A-Z" id="A-Z"> A - Z </option>
+          <option value="Z-A" id="Z-A"> Z - A </option>
+        </optgroup>
+        <optgroup label="Casas">
+          <option value="Gryffindor"> Gryffindor </option>
+          <option value="Slytherin"> Slytherin </option>
+          <option value="Hufflepuff"> Hufflepuff </option>
+          <option value="Ravenclaw"> Ravenclaw </option>
+        </optgroup>
+      </select>
+    </div></div>
+
+    <div class="hide" id="insertPotterProfesors">
+        <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+         <h1>Profesores</h1>
+      <div id="filterProfesors">
+        <select id="thirdFilter">
+          <option hidden selected> F I L T R O
+          <optgroup label="Ordenar">
+            <option value="A-Z" id="A-Z"> A - Z </option>
+            <option value="Z-A" id="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="Casas">
+            <option value="Gryffindor"> Gryffindor </option>
+            <option value="Slytherin"> Slytherin </option>
+            <option value="Hufflepuff"> Hufflepuff </option>
+            <option value="Ravenclaw"> Ravenclaw </option>
+          </optgroup>
+        </select>
+      </div></div>
+    
     </div>
-  </div>
     <script type="module" src="main.js"></script>
     <script type="module" src="data.js"></script>
   </body>
