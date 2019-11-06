@@ -2,6 +2,7 @@
   font-family: 'Marcellus SC';
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,33 +12,48 @@ body {
   background-attachment: fixed;
 }
 
-
 /*Esto es para aparecer y desaparecer pantallas*/
 
 .hide {
   display: none;
 }
 
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
-}
-
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center;
+.HPLogo {
+  width: 50%;
+  display:block;
+  margin:auto;
+  padding: 10px;
 }
 
 /* Estilos del menu principal*/
+
+nav {
+  background-color: rgba(18, 18, 48, 0.91);
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+label > img {
+  padding: 15px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 70px;
+}
+
+input[type='checkbox']
+{
+  display: none;
+}
+
+input[type='checkbox']:checked ~ nav {
+  transform: translateX(100%);
+}
 
 a {
   text-decoration: none;
@@ -46,17 +62,10 @@ a {
   padding: 20px 5px;
 }
 
+
 #menu_general li:hover a, #menu_general li a:focus {
   /*background-color: rgba(119, 136, 153, 0.95);*/
   color: #ffffff;
-}
-
-label {
-  padding: 15px;
-  position: absolute;
-  z-index: 1;
-  /*position: fixed;*/
-  top: 0;
 }
 
 #principalMenuCategorie {
@@ -72,56 +81,15 @@ label {
   font-size: 25px;
 }
 
-img {
-  width: 40px;
-}
-
-input[type='checkbox']
-{
-  display: none;
-}
-
-nav {
-  background-color: rgba(18, 18, 48, 0.91);
-  width: 350px;
-  height: 100%;
-  left: -350px;
-  position: absolute;
-  transition: all .5s;
-  position: fixed;
-  top: 0;
-}
-
-input[type='checkbox']:checked ~ nav {
-  transform: translateX(350px);
-}
 
 /* Estilos de las sub categorias del menu principal*/
 
-#menu_general {
-  font-family: 'Marcellus SC';
-  width: 23vw;
-  margin:  0;
-}
-
-#menu_general ul {
-  list-style-type: none;
-}
-
-#menu_general > ul li {
-  background: none;
-}
 
 #menu_general li a {
   display: block;
   text-decoration: none;
   font-size: 20px;
   line-height: 20px;
-  color: #ffffff;
-}
-
-#menu_general li:hover a, #menu_general li a:focus {
-  /*background-color: rgba(18, 18, 48, 0.91);*/
   color: #ffffff;
 }
 
@@ -145,37 +113,17 @@ input[type='checkbox']:checked ~ nav {
   color: #300E4A;
 }
 
+#menu_general li:hover a, #menu_general li a:focus {
+  background: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
+}
+
 p {
   font-size: 1.000em;
   margin: 9px;
   margin-left: 30px;
 }
 
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center;
-}
-
-body {
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.HPLogo {
-   width: 45%;
-   display:block;
-   margin:auto;
-}
 
 #filterSelection {
   text-align: center;
@@ -188,11 +136,12 @@ body {
 }
 
 #filterCategories {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 180px;
-  margin-top: 70px;
-  margin-bottom: 20px;
+  padding: 20px;
+  text-align: end;
+}
+
+#insertPotterCharacter {
+  flex-direction: row;
 }
 
 .flex-container {
@@ -201,7 +150,6 @@ body {
 
 .photoCharacter {
     display: inline-block;
-    outline: 1px solid transparent;
     width: 55%;
     height: 210px;
     margin-top: 65px;
@@ -232,10 +180,9 @@ body {
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 158%;
   backface-visibility: hidden;
   border-radius: 15px;
-  padding-bottom: 100px;
 }
 
 .flip-card-front {
@@ -249,52 +196,6 @@ body {
   text-align: justify;
 }
 
-ul {
-  list-style-type: none;
-}
-
-/* Esto hara que los cards se vean detras del menu principal*/
-
-#root {
-  position: absolute;
-  z-index: 0;
-}
-
-/* Esto hara que el menu se vea delante de los cards*/
-
-#principalMenu{
-  position: absolute;
-  z-index: 1;
-}
-
-/*Esto es para la transicion de la hamburguesa menu"*/
-
-/*.object {
- position: absolute;
- transition: all 0.7s ease-out;
- -webkit-transition: all 0.7s ease-out; /* Chrome & Safari */
- /*-moz-transition: all 0.7s ease-out; /* Firefox */
- /*-o-transition: all 0.7s ease-out; /* Opera */
-/*}
-
-/*.hamburguer {
-  top: 45%;
-  left: 44%;
-}
-
-#axis:hover .move-right {
-  transform: translate(200px,0);
-  -webkit-transform: translate(200px,0); /* Chrome & Safari */
-  /*-o-transform: translate(200px,0); /* Opera */
-  /*-moz-transform: translate(200px,0); /* Firefox */
-/*}
-
-#axis:hover .move-left {
-  transform: translate(-200px,0);
-  -webkit-transform: translate(-200px,0); /** Safari & Chrome **/
-  /*-o-transform: translate(-200px,0); /** Opera **/
-  /*-moz-transform: translate(-200px,0); /** Firefox **/
-/*}*/
 
 /*Esto es para el buscador del menu principal*/
 
@@ -369,4 +270,45 @@ ul {
  
   .container-4:hover button.icon:hover{
     background: white;
+  }
+
+  h1 {
+    font-size: 1.500em;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.500em;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+  }
+
+  p {
+    font-size: 1.000em;
+    margin: 9px;
+    margin-left: 30px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  @media screen and (min-width: 1000px) {
+    nav {
+      background-color: rgba(18, 18, 48, 0.91);
+      width: 20%;
+      height: 100%;
+      left: -20%;
+      transition: all .5s;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+  
+    input[type='checkbox']:checked ~ nav {
+      transform: translateX(100%);
+    }
   }

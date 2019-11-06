@@ -49,14 +49,14 @@
     </nav>
   </header>
 
-  <div id='principalContainer' class="container">
+  <div id='principalContainer'>
     <img src="img\LOGO HPW.png" class="HPLogo">
     <div id="filterCategories">
       <select id="filterSelection">
         <option hidden selected> F I L T R O
         <optgroup label="Ordenar">
-          <option value="A-Z" id="A-Z"> A - Z </option>
-          <option value="Z-A" id="Z-A"> Z - A </option>
+          <option value="A-Z"> A - Z </option>
+          <option value="Z-A"> Z - A </option>
         </optgroup>
         <optgroup label="Ocupacion">
           <option value="Estudiantes"> Estudiantes </option>
@@ -69,13 +69,12 @@
           <option value="Ravenclaw"> Ravenclaw </option>
         </optgroup>
       </select>
-    </div> </div>
+    </div> 
+    <div id="insertPotterCharacter"></div>
+  </div>
 
-    <div id="root">
 
-      <div id="insertPotterCharacter"></div>
-
-    <div class="hide" id="insertPotterStudents">
+       <div id='potterStudents' class="hide">
       <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
        <h1>Estudiantes</h1>
     <div id="filterStudents">
@@ -92,9 +91,11 @@
           <option value="Ravenclaw"> Ravenclaw </option>
         </optgroup>
       </select>
-    </div></div>
+    </div>
+    <div id="insertPotterStudents"></div>
+  </div>
 
-    <div class="hide" id="insertPotterProfesors">
+      <div class="hide" id='potterProfesors'>
         <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
          <h1>Profesores</h1>
       <div id="filterProfesors">
@@ -111,9 +112,10 @@
             <option value="Ravenclaw"> Ravenclaw </option>
           </optgroup>
         </select>
-      </div></div>
-    
+      </div>
+      <div id="insertPotterProfesors"></div>
     </div>
+    
     <script type="module" src="main.js"></script>
     <script type="module" src="data.js"></script>
   </body>
