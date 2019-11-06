@@ -4,39 +4,24 @@
   padding: 0px;
 }
 
+body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/*Esto es para aparecer y desaparecer pantallas*/
+
 .hide {
   display: none;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-  display: block;
-  padding: 20px 5px;
-}
-
-#menu_general li:hover a, #menu_general li a:focus {
-  background-color: rgba(119, 136, 153, 0.95);
-  color: #300E4A;
-}
-
-label {
-  padding: 15px;
-  position: absolute;
-  z-index: 1;
-  position: fixed;
-  top: 0;
 }
 
 p {
   font-size: 1.000em;
   margin: 9px;
   margin-left: 30px;
-}
-
-#principalMenuCategorie {
-  font-size: 0.813em;
-  margin-left: 90px;
 }
 
 h1 {
@@ -52,16 +37,36 @@ h2 {
   text-align: center;
 }
 
-body {
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* Estilos del menu principal*/
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 20px 5px;
+}
+
+#menu_general li:hover a, #menu_general li a:focus {
+  /*background-color: rgba(119, 136, 153, 0.95);*/
+  color: #ffffff;
+}
+
+label {
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  /*position: fixed;*/
+  top: 0;
+}
+
+#principalMenuCategorie {
+  font-size: 0.813em;
+  margin-left: 35px;
 }
 
 #principalMenuList {
   list-style: none;
-  top: 70px;
+  top: 140px;
   width: 100%;
   position: absolute;
   font-size: 25px;
@@ -93,15 +98,6 @@ input[type='checkbox']:checked ~ nav {
 
 /* Estilos de las sub categorias del menu principal*/
 
-/*#subOption {
-  display: block;
-  text-decoration: none;
-  font-size: 15px;
-  text-align: right 3px;
-  line-height: 2.5rem;
-  color: #ffffff;
-}*/
-
 #menu_general {
   font-family: 'Marcellus SC';
   width: 23vw;
@@ -125,8 +121,8 @@ input[type='checkbox']:checked ~ nav {
 }
 
 #menu_general li:hover a, #menu_general li a:focus {
-  background-color: rgba(119, 136, 153, 0.95);
-  color: #300E4A;
+  /*background-color: rgba(18, 18, 48, 0.91);*/
+  color: #ffffff;
 }
 
 #menu_general li ul {
@@ -142,12 +138,11 @@ input[type='checkbox']:checked ~ nav {
   font-family: 'Marcellus SC';
   font-size: 15px;
   line-height: 5px;
-  border-top: 1px solid red;
-  background: white;
 }
 
 #menu_general li li a:hover, #menu_general li li a:focus{
-  background: yellow;
+  background: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
 }
 
 p {
@@ -257,3 +252,121 @@ body {
 ul {
   list-style-type: none;
 }
+
+/* Esto hara que los cards se vean detras del menu principal*/
+
+#root {
+  position: absolute;
+  z-index: 0;
+}
+
+/* Esto hara que el menu se vea delante de los cards*/
+
+#principalMenu{
+  position: absolute;
+  z-index: 1;
+}
+
+/*Esto es para la transicion de la hamburguesa menu"*/
+
+/*.object {
+ position: absolute;
+ transition: all 0.7s ease-out;
+ -webkit-transition: all 0.7s ease-out; /* Chrome & Safari */
+ /*-moz-transition: all 0.7s ease-out; /* Firefox */
+ /*-o-transition: all 0.7s ease-out; /* Opera */
+/*}
+
+/*.hamburguer {
+  top: 45%;
+  left: 44%;
+}
+
+#axis:hover .move-right {
+  transform: translate(200px,0);
+  -webkit-transform: translate(200px,0); /* Chrome & Safari */
+  /*-o-transform: translate(200px,0); /* Opera */
+  /*-moz-transform: translate(200px,0); /* Firefox */
+/*}
+
+#axis:hover .move-left {
+  transform: translate(-200px,0);
+  -webkit-transform: translate(-200px,0); /** Safari & Chrome **/
+  /*-o-transform: translate(-200px,0); /** Opera **/
+  /*-moz-transform: translate(-200px,0); /** Firefox **/
+/*}*/
+
+/*Esto es para el buscador del menu principal*/
+
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.container-4 input#search{
+  width: 210px;
+  height: 40px;
+  margin-top: 85px;
+  margin-left: 35px;
+  background: #2b303b;
+  border: none;
+  font-size: 9pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-4 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;  
+}
+
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;  
+}
+
+.container-4 input#search:-ms-input-placeholder {  
+  color: #65737e;  
+}
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+ 
+  border: none;
+  background: #232833;
+  height: 40px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 9pt;
+  margin-top: 85px;
+ 
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+  }
+ 
+  .container-4:hover button.icon:hover{
+    background: white;
+  }
