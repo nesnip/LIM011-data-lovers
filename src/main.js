@@ -54,23 +54,28 @@ filterSelection.addEventListener('change', () => {
   }
 });
 
-const filteredStudentsMenu = document.querySelector('#subOption1');
-console.log(filteredStudentsMenu);
-
+/*const filteredStudentsMenu = document.querySelector('#subOption1');
+const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
+const insertPotterStudents = document.querySelector('#insertPotterStudents');
+const principalContainer = document.querySelector('#principalContainer')
 filteredStudentsMenu.addEventListener('click', () => {
+  insertPotterCharacter.classList.add('hide');
+  principalContainer.classList.add('hide');
+  insertPotterStudents.classList.remove('hide');
   const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
   console.log(filteredStudents);
-  document.querySelector('#insertPotterOcupation').innerHTML = showPotterCharacters(filteredStudents);
-});
+  document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(filteredStudents);
+});*/
 
 const filteredProfesorMenu = document.querySelector('#subOption2');
 const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
-const insertPotterOcupation = document.querySelector('#insertPotterOcupation');
-
+const insertPotterProfesors = document.querySelector('#insertPotterProfesors');
+const principalContainer = document.querySelector('#principalContainer')
 filteredProfesorMenu.addEventListener('click', () => {
   insertPotterCharacter.classList.add('hide');
-  insertPotterOcupation.classList.remove('hide');
+  principalContainer.classList.add('hide');
+  insertPotterProfesors.classList.remove('hide');
   const filteredProfesors = [...POTTER].filter(item => item.hogwartsStaff === true);
   console.log(filteredProfesors);
-  document.querySelector('#insertPotterOcupation').innerHTML = showPotterCharacters(filteredProfesors);
+  document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filteredProfesors);
 })
