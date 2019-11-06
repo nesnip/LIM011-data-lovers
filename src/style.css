@@ -2,10 +2,52 @@
   font-family: 'Marcellus SC';
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .hide {
   display: none;
+}
+
+body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.HPLogo {
+  width: 50%;
+  display:block;
+  margin: auto;
+  padding: 10px;
+}
+
+nav {
+  background-color: rgba(18, 18, 48, 0.91);
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+label > img {
+  padding: 15px;
+  position: absolute;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 70px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ nav {
+  transform: translateX(100%);
 }
 
 a {
@@ -15,108 +57,11 @@ a {
   padding: 20px 5px;
 }
 
-#menu_general li:hover a, #menu_general li a:focus {
-  background-color: rgba(119, 136, 153, 0.95);
-  color: #300E4A;
-}
-
-label {
-  padding: 15px;
-  position: absolute;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-}
-
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
-}
-
-#principalMenuCategorie {
-  font-size: 0.813em;
-  margin-left: 90px;
-}
-
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center;
-}
-
-body {
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-#principalMenuList {
-  list-style: none;
-  top: 70px;
-  width: 100%;
-  position: absolute;
-  font-size: 25px;
-}
-
-img {
-  width: 40px;
-}
-
-input[type='checkbox']
-{
-  display: none;
-}
-
-nav {
-  background-color: rgba(18, 18, 48, 0.91);
-  width: 350px;
-  height: 100%;
-  left: -350px;
-  position: absolute;
-  transition: all .5s;
-  position: fixed;
-  top: 0;
-}
-
-input[type='checkbox']:checked ~ nav {
-  transform: translateX(350px);
-}
-
-/* Estilos de las sub categorias del menu principal*/
-
-/*#subOption {
-  display: block;
-  text-decoration: none;
-  font-size: 15px;
-  text-align: right 3px;
-  line-height: 2.5rem;
-  color: #ffffff;
-}*/
-
-#menu_general {
-  font-family: 'Marcellus SC';
-  width: 23vw;
-  margin:  0;
-}
-
-#menu_general ul {
+li {
   list-style-type: none;
 }
 
-#menu_general > ul li {
-  background: none;
-}
-
-#menu_general li a {
+.menu_general li a {
   display: block;
   text-decoration: none;
   font-size: 20px;
@@ -124,21 +69,21 @@ input[type='checkbox']:checked ~ nav {
   color: #ffffff;
 }
 
-#menu_general li:hover a, #menu_general li a:focus {
+.menu_general li:hover a, .menu_general li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
 
-#menu_general li ul {
+.menu_general li ul {
   height: 0;
   overflow: hidden;
 }
 
-#menu_general li:hover ul, #menu_general li:focus ul {
+.menu_general li:hover ul, .menu_general li:focus ul {
   height: auto;
 }
 
-#menu_general li:hover li a, #menu_general li:focus li a {
+.menu_general li:hover li a, .menu_general li:focus li a {
   font-family: 'Marcellus SC';
   font-size: 15px;
   line-height: 5px;
@@ -146,40 +91,26 @@ input[type='checkbox']:checked ~ nav {
   background: white;
 }
 
-#menu_general li li a:hover, #menu_general li li a:focus{
+.menu_general li li a:hover, .menu_general li li a:focus{
   background: yellow;
 }
 
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
+.menu_general li:hover a, .menu_general li a:focus {
+  background-color: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
 }
 
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
+.principalMenuList {
+  list-style: none;
+  top: 70px;
+  width: 100%;
+  position: absolute;
+  font-size: 25px;
 }
 
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center;
-}
-
-body {
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.HPLogo {
-   width: 45%;
-   display:block;
-   margin:auto;
+.principalMenuCategorie {
+  font-size: 0.813em;
+  margin-left: 90px;
 }
 
 #filterSelection {
@@ -193,11 +124,17 @@ body {
 }
 
 #filterCategories {
+  padding: 20px;
+  text-align: end;
+}
+
+.container {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 180px;
-  margin-top: 70px;
-  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#insertPotterCharacter {
+  flex-direction: row;
 }
 
 .flex-container {
@@ -205,11 +142,10 @@ body {
 }
 
 .photoCharacter {
-    display: inline-block;
-    outline: 1px solid transparent;
-    width: 55%;
-    height: 210px;
-    margin-top: 65px;
+  display: inline-block;
+  width: 55%;
+  height: 210px;
+  margin-top: 65px;
 }
 
 .flip-card {
@@ -217,7 +153,7 @@ body {
   height: 300px;
   perspective: 1000px;
   padding: 20px;
-  margin-bottom: 95px;
+  margin-bottom: 150px;
   float: left;
 }
 
@@ -237,10 +173,9 @@ body {
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 158%;
   backface-visibility: hidden;
   border-radius: 15px;
-  padding-bottom: 100px;
 }
 
 .flip-card-front {
@@ -254,6 +189,41 @@ body {
   text-align: justify;
 }
 
-ul {
-  list-style-type: none;
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
 }
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+}
+
+p {
+  font-size: 1.000em;
+  margin: 9px;
+  margin-left: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  nav {
+    background-color: rgba(18, 18, 48, 0.91);
+    width: 20%;
+    height: 100%;
+    left: -20%;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
+  }
+}
+
+
