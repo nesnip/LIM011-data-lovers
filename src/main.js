@@ -54,18 +54,20 @@ filterSelection.addEventListener('change', () => {
   }
 });
 
+const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
+const insertPotterOcupation = document.querySelector('#insertPotterOcupation');
 const filteredStudentsMenu = document.querySelector('#subOption1');
 console.log(filteredStudentsMenu);
 
 filteredStudentsMenu.addEventListener('click', () => {
+  insertPotterCharacter.classList.add('hide');
+  insertPotterOcupation.classList.remove('hide');
   const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
   console.log(filteredStudents);
   document.querySelector('#insertPotterOcupation').innerHTML = showPotterCharacters(filteredStudents);
 });
 
 const filteredProfesorMenu = document.querySelector('#subOption2');
-const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
-const insertPotterOcupation = document.querySelector('#insertPotterOcupation');
 
 filteredProfesorMenu.addEventListener('click', () => {
   insertPotterCharacter.classList.add('hide');
@@ -73,4 +75,4 @@ filteredProfesorMenu.addEventListener('click', () => {
   const filteredProfesors = [...POTTER].filter(item => item.hogwartsStaff === true);
   console.log(filteredProfesors);
   document.querySelector('#insertPotterOcupation').innerHTML = showPotterCharacters(filteredProfesors);
-})
+});
