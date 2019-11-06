@@ -18,16 +18,16 @@
       <img src="img\mdi_menu.png">
     </label>
 
-    <nav id="menu_general">
-     <ul id="principalMenuList">
-       <li id="principalMenuCategorie"><a href="#">Ocupacion</a>
-       <ul id="subCategories">
-         <li id="subOption"><a href="#" id="subOption1">Estudiantes</a></li>
-         <li id="subOption"><a href="#" id="subOption2">Profesores</a></li>
+    <nav class="menu_general">
+     <ul class="principalMenuList">
+       <li class="principalMenuCategorie"><a href="#">Ocupación</a>
+       <ul class="subCategories">
+         <li><a href="#" id="subOption1">Estudiantes</a></li>
+         <li><a href="#" id="subOption2">Profesores</a></li>
        </ul>
       </li>
-       <li id="principalMenuCategorie"><a href="#">Varitas</a></li>
-       <li id="principalMenuCategorie"><a href="#">Casas</a>
+       <li class="principalMenuCategorie"><a href="#">Varitas</a></li>
+       <li class="principalMenuCategorie"><a href="#">Casas</a>
        <ul>
          <li><a href="#">Gryffindor</a></li>
          <li><a href="#">Slytherin</a></li>
@@ -35,37 +35,36 @@
          <li><a href="#">Ravenclaw</a></li>
        </ul>
       </li>
-       <li id="principalMenuCategorie"><a href="#">Hechizos</a></li>
+       <li class="principalMenuCategorie"><a href="#">Hechizos</a></li>
      </ul>
     </nav>
   </header>
 
   <img src="img\LOGO HPW.png" class="HPLogo">
 
+  <div id="filterCategories">
+    <select id="filterSelection">
+      <option hidden selected> F I L T R O
+      <optgroup label="Ordenar">
+        <option value="A-Z" id="A-Z"> A - Z </option>
+        <option value="Z-A" id="Z-A"> Z - A </option>
+      </optgroup>
+      <optgroup label="Ocupacion">
+        <option value="Estudiantes"> Estudiantes </option>
+        <option value="Profesores"> Profesores </option>
+      </optgroup>
+      <optgroup label="Casas">
+        <option value="Gryffindor"> Gryffindor </option>
+        <option value="Slytherin"> Slytherin </option>
+        <option value="Hufflepuff"> Hufflepuff </option>
+        <option value="Ravenclaw"> Ravenclaw </option>
+      </optgroup>
+    </select>
+  </div>
+
   <div class="container">
-    <div id="filterCategories">
-      <select id="filterSelection">
-        <option hidden selected> F I L T R O
-        <optgroup label="Ordenar">
-          <option value="A-Z" id="A-Z"> A - Z </option>
-          <option value="Z-A" id="Z-A"> Z - A </option>
-        </optgroup>
-        <optgroup label="Ocupacion">
-          <option value="Estudiantes"> Estudiantes </option>
-          <option value="Profesores"> Profesores </option>
-        </optgroup>
-        <optgroup label="Casas">
-          <option value="Gryffindor"> Gryffindor </option>
-          <option value="Slytherin"> Slytherin </option>
-          <option value="Hufflepuff"> Hufflepuff </option>
-          <option value="Ravenclaw"> Ravenclaw </option>
-        </optgroup>
-      </select>
-    </div>
-    <div id="root">
-      <div class="" id="insertPotterCharacter"></div>
-      <div class="hide" id="insertPotterOcupation"></div>
-    </div>
+    <div class="" id="insertPotterCharacter"></div>
+    <div class="hide" id="insertPotterOcupation"></div>
   </div>
     <script type="module" src="main.js"></script>
     <script type="module" src="data.js"></script>
