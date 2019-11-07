@@ -8,7 +8,6 @@
 body {
   background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -46,8 +45,7 @@ label > img {
   width: 70px;
 }
 
-input[type='checkbox']
-{
+input[type='checkbox'] {
   display: none;
 }
 
@@ -62,28 +60,25 @@ a {
   padding: 20px 5px;
 }
 
-
 #menu_general li:hover a, #menu_general li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
 
-.principalMenuCategorie {
+#principalMenuCategorie {
   font-size: 0.813em;
   margin-left: 35px;
 }
 
-.principalMenuList {
+#principalMenuList {
   list-style: none;
-  top: 70px;
+  top: 140px;
   width: 100%;
   position: absolute;
   font-size: 25px;
 }
 
-
-/* Estilos de las sub categorias del menu principal*/
-
+/* Estilos de las subcategorías del menú principal */
 
 #menu_general li a {
   display: block;
@@ -114,16 +109,9 @@ a {
 }
 
 #menu_general li:hover a, #menu_general li a:focus {
-  background: rgba(119, 136, 153, 0.95);
+  background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
-
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
-}
-
 
 #filterSelection {
   text-align: center;
@@ -140,12 +128,10 @@ p {
   text-align: end;
 }
 
-#insertPotterCharacter {
-  flex-direction: row;
-}
-
 .flex-container {
+  display: flex;
   justify-content: center;
+  margin: auto;
 }
 
 .photoCharacter {
@@ -161,7 +147,6 @@ p {
   perspective: 1000px;
   padding: 20px;
   margin-bottom: 150px;
-  float: left;
 }
 
 .flip-card-inner {
@@ -194,6 +179,36 @@ p {
   transform: rotateY(180deg);
   background-color: rgba(119,136,153,0.95);
   text-align: justify;
+}
+
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+}
+
+p {
+  font-size: 1.000em;
+  margin: 9px;
+  margin-left: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+div > li {
+  font-size: 1.000em;
+  margin: 3px;
+  margin-left: 38px;
 }
 
 /*Esto es para el buscador del menu principal*/
@@ -262,13 +277,359 @@ p {
 }
 
 .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-    outline: none;
-    opacity: 1;
-    margin-left: -50px;
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.container-4:hover button.icon:hover{
+  background: white;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) { ... } */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  nav {
+    background-color: rgba(18, 18, 48, 0.91);
+    width: 50%;
+    height: 100%;
+    left: -50%;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
   }
 
-  .container-4:hover button.icon:hover{
-    background: white;
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
+  }
+
+  /* Orden de las tarjetas */
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    float: left;
+  }
+
+  .photoCharacter {
+    display: inline-block;
+    width: 55%;
+    height: 208px;
+    margin-top: 15%;
+  }
+
+  .flip-card {
+    width: 50%;
+    height: 17em;
+    perspective: 1000px;
+    padding: 20px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 155%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .flip-card-front {
+    background-color: rgba(119,136,153,0.95);
+  }
+
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    background-color: rgba(119,136,153,0.95);
+    text-align: justify;
+  }
+
+  /* Contenido del flip-card-back */
+  h1 {
+    font-size: 1.500em;
+    margin: 7% auto 4%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.500em;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+  }
+
+  p {
+    font-size: 1.00em;
+    margin: 2%;
+    margin-left: 10%;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  div > li {
+    font-size: 0.900em;
+    margin: 1%;
+    margin-left: 15%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  nav {
+    background-color: rgba(18, 18, 48, 0.91);
+    width: 25%;
+    height: 100%;
+    left: -25%;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
+  }
+
+  /* Orden de las tarjetas */
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    float: left;
+  }
+
+  .photoCharacter {
+    display: inline-block;
+    width: 55%;
+    height: 180px;
+    margin-top: 25%;
+  }
+
+  .flip-card {
+    width: 25%;
+    height: 17em;
+    perspective: 1000px;
+    padding: 20px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 155%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .flip-card-front {
+    background-color: rgba(119,136,153,0.95);
+  }
+
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    background-color: rgba(119,136,153,0.95);
+    text-align: justify;
+  }
+
+  /* Contenido del flip-card-back */
+  h1 {
+    font-size: 1.500em;
+    margin: 8%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.500em;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+  }
+
+  p {
+    font-size: 0.900em;
+    margin: 2%;
+    margin-left: 5%;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  div > li {
+    font-size: 0.890em;
+    margin: 1%;
+    margin-left: 10%;
+  }
+
+  /*Esto es para el buscador del menu principal*/
+
+  .container-4{
+    overflow: hidden;
+    width: 90%;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .container-4 input#search{
+    width: 80%;
+    height: 40px;
+    margin-top: 85px;
+    margin-left: 35px;
+    background: #2b303b;
+    border: none;
+    font-size: 9pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  nav {
+    background-color: rgba(18, 18, 48, 0.91);
+    width: 25%;
+    height: 100%;
+    left: -25%;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    float: left;
+  }
+
+  .photoCharacter {
+    display: inline-block;
+    width: 55%;
+    height: 210px;
+    margin-top: 65px;
+  }
+
+  .flip-card {
+    width: 25%;
+    height: 300px;
+    perspective: 1000px;
+    padding: 20px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 158%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .flip-card-front {
+    background-color: rgba(119,136,153,0.95);
+  }
+
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    background-color: rgba(119,136,153,0.95);
+    text-align: justify;
+  }
+
+  /*Esto es para el buscador del menu principal*/
+
+  .container-4{
+    overflow: hidden;
+    width: 90%;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .container-4 input#search{
+    width: 210px;
+    height: 40px;
+    margin-top: 85px;
+    margin-left: 35px;
+    background: #2b303b;
+    border: none;
+    font-size: 9pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
 
   h1 {
@@ -295,19 +656,9 @@ p {
     list-style-type: none;
   }
 
-  @media screen and (min-width: 1000px) {
-    nav {
-      background-color: rgba(18, 18, 48, 0.91);
-      width: 20%;
-      height: 100%;
-      left: -20%;
-      transition: all .5s;
-      position: fixed;
-      top: 0;
-      z-index: 1;
-    }
-
-    input[type='checkbox']:checked ~ nav {
-      transform: translateX(100%);
-    }
+  div > li {
+    font-size: 1.000em;
+    margin: 3px;
+    margin-left: 38px;
   }
+}

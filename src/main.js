@@ -74,5 +74,4 @@ filteredProfesorsMenu.addEventListener('click', () => {
   const filteredProfesors = [...POTTER].filter(item => item.hogwartsStaff === true);
   console.log(filteredProfesors);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filteredProfesors);
-})
-
+});
