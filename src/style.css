@@ -5,22 +5,27 @@
   box-sizing: border-box;
 }
 
-.hide {
-  display: none;
-}
-
 body {
   background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
   background-size: 100%;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/*Esto es para aparecer y desaparecer pantallas*/
+
+.hide {
+  display: none;
 }
 
 .HPLogo {
   width: 50%;
   display:block;
-  margin: auto;
+  margin:auto;
   padding: 10px;
 }
+
+/* Estilos del menu principal*/
 
 nav {
   background-color: rgba(18, 18, 48, 0.91);
@@ -35,14 +40,14 @@ nav {
 
 label > img {
   padding: 15px;
-  position: absolute;
   z-index: 2;
   position: fixed;
   top: 0;
   width: 70px;
 }
 
-input[type='checkbox'] {
+input[type='checkbox']
+{
   display: none;
 }
 
@@ -57,11 +62,30 @@ a {
   padding: 20px 5px;
 }
 
-li {
-  list-style-type: none;
+
+#menu_general li:hover a, #menu_general li a:focus {
+  /*background-color: rgba(119, 136, 153, 0.95);*/
+  color: #ffffff;
 }
 
-.menu_general li a {
+#principalMenuCategorie {
+  font-size: 0.813em;
+  margin-left: 35px;
+}
+
+#principalMenuList {
+  list-style: none;
+  top: 140px;
+  width: 100%;
+  position: absolute;
+  font-size: 25px;
+}
+
+
+/* Estilos de las sub categorias del menu principal*/
+
+
+#menu_general li a {
   display: block;
   text-decoration: none;
   font-size: 20px;
@@ -69,12 +93,7 @@ li {
   color: #ffffff;
 }
 
-.menu_general li:hover a, .menu_general li a:focus {
-  background-color: rgba(119, 136, 153, 0.95);
-  color: #300E4A;
-}
-
-.menu_general li ul {
+#menu_general li ul {
   height: 0;
   overflow: hidden;
 }
@@ -87,31 +106,24 @@ li {
   font-family: 'Marcellus SC';
   font-size: 15px;
   line-height: 5px;
-  border-top: 1px solid red;
-  background: white;
 }
 
-.menu_general li li a:hover, .menu_general li li a:focus{
-  background: yellow;
-}
-
-.menu_general li:hover a, .menu_general li a:focus {
-  background-color: rgba(119, 136, 153, 0.95);
+#menu_general li li a:hover, #menu_general li li a:focus{
+  background: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
 
-.principalMenuList {
-  list-style: none;
-  top: 70px;
-  width: 100%;
-  position: absolute;
-  font-size: 25px;
+#menu_general li:hover a, #menu_general li a:focus {
+  background: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
 }
 
-.principalMenuCategorie {
-  font-size: 0.813em;
-  margin-left: 90px;
+p {
+  font-size: 1.000em;
+  margin: 9px;
+  margin-left: 30px;
 }
+
 
 #filterSelection {
   text-align: center;
@@ -128,11 +140,6 @@ li {
   text-align: end;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-}
-
 #insertPotterCharacter {
   flex-direction: row;
 }
@@ -142,10 +149,10 @@ li {
 }
 
 .photoCharacter {
-  display: inline-block;
-  width: 55%;
-  height: 210px;
-  margin-top: 65px;
+    display: inline-block;
+    width: 55%;
+    height: 210px;
+    margin-top: 65px;
 }
 
 .flip-card {
@@ -189,41 +196,119 @@ li {
   text-align: justify;
 }
 
-h1 {
-  font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-align: center;
+
+/*Esto es para el buscador del menu principal*/
+
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-h2 {
-  font-size: 1.500em;
-  color: #ffffff;
-  text-align: center;
-  padding: 25px;
+.container-4 input#search{
+  width: 210px;
+  height: 40px;
+  margin-top: 85px;
+  margin-left: 35px;
+  background: #2b303b;
+  border: none;
+  font-size: 9pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
+.container-4 input#search::-webkit-input-placeholder {
+  color: #65737e;
 }
 
-@media screen and (min-width: 1000px) {
-  nav {
-    background-color: rgba(18, 18, 48, 0.91);
-    width: 20%;
-    height: 100%;
-    left: -20%;
-    transition: all .5s;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;  
+}
+
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;  
+}
+
+.container-4 input#search:-ms-input-placeholder {  
+  color: #65737e;  
+}
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+ 
+  border: none;
+  background: #232833;
+  height: 40px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 9pt;
+  margin-top: 85px;
+ 
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+  }
+ 
+  .container-4:hover button.icon:hover{
+    background: white;
   }
 
-  input[type='checkbox']:checked ~ nav {
-    transform: translateX(100%);
+  h1 {
+    font-size: 1.500em;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
   }
-}
+  
+  h2 {
+    font-size: 1.500em;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+  }
 
+  p {
+    font-size: 1.000em;
+    margin: 9px;
+    margin-left: 30px;
+  }
 
+  li {
+    list-style-type: none;
+  }
+
+  @media screen and (min-width: 1000px) {
+    nav {
+      background-color: rgba(18, 18, 48, 0.91);
+      width: 20%;
+      height: 100%;
+      left: -20%;
+      transition: all .5s;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+  
+    input[type='checkbox']:checked ~ nav {
+      transform: translateX(100%);
+    }
+  }
