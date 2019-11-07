@@ -6,7 +6,6 @@
 import POTTER from './data/potter/potter.js';
 import { showPotterCharacters } from './data.js';
 
-console.log(POTTER);
 
 document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(POTTER);
 
@@ -62,6 +61,7 @@ const potterProfesors = document.querySelector('#potterProfesors');
 
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  potterProfesors.classList.add('hide');
   potterStudents.classList.remove('hide');
   const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
   console.log(filteredStudents);
@@ -70,6 +70,7 @@ filteredStudentsMenu.addEventListener('click', () => {
 
 filteredProfesorsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  potterStudents.classList.add('hide');
   potterProfesors.classList.remove('hide');
   const filteredProfesors = [...POTTER].filter(item => item.hogwartsStaff === true);
   console.log(filteredProfesors);
