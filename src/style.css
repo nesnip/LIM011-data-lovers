@@ -46,8 +46,7 @@ label > img {
   width: 70px;
 }
 
-input[type='checkbox']
-{
+input[type='checkbox'] {
   display: none;
 }
 
@@ -62,10 +61,9 @@ a {
   padding: 20px 5px;
 }
 
-
 #menu_general li:hover a, #menu_general li a:focus {
-  /*background-color: rgba(119, 136, 153, 0.95);*/
-  color: #ffffff;
+  background-color: rgba(119, 136, 153, 0.95);
+  color: #300E4A;
 }
 
 #principalMenuCategorie {
@@ -81,9 +79,7 @@ a {
   font-size: 25px;
 }
 
-
-/* Estilos de las sub categorias del menu principal*/
-
+/* Estilos de las subcategorías del menú principal */
 
 #menu_general li a {
   display: block;
@@ -98,11 +94,11 @@ a {
   overflow: hidden;
 }
 
-.menu_general li:hover ul, .menu_general li:focus ul {
+#menu_general li:hover ul, #menu_general li:focus ul {
   height: auto;
 }
 
-.menu_general li:hover li a, .menu_general li:focus li a {
+#menu_general li:hover li a, #menu_general li:focus li a {
   font-family: 'Marcellus SC';
   font-size: 15px;
   line-height: 5px;
@@ -114,16 +110,9 @@ a {
 }
 
 #menu_general li:hover a, #menu_general li a:focus {
-  background: rgba(119, 136, 153, 0.95);
+  background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
-
-p {
-  font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
-}
-
 
 #filterSelection {
   text-align: center;
@@ -149,10 +138,10 @@ p {
 }
 
 .photoCharacter {
-    display: inline-block;
-    width: 55%;
-    height: 210px;
-    margin-top: 65px;
+  display: inline-block;
+  width: 55%;
+  height: 210px;
+  margin-top: 65px;
 }
 
 .flip-card {
@@ -196,7 +185,6 @@ p {
   text-align: justify;
 }
 
-
 /*Esto es para el buscador del menu principal*/
 
 .container-4{
@@ -227,15 +215,15 @@ p {
 }
 
 .container-4 input#search:-moz-placeholder { /* Firefox 18- */
-  color: #65737e;  
+  color: #65737e;
 }
 
 .container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
-  color: #65737e;  
+  color: #65737e;
 }
 
-.container-4 input#search:-ms-input-placeholder {  
-  color: #65737e;  
+.container-4 input#search:-ms-input-placeholder {
+  color: #65737e;
 }
 
 .container-4 button.icon{
@@ -245,7 +233,7 @@ p {
   -moz-border-radius-bottomright: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
- 
+
   border: none;
   background: #232833;
   height: 40px;
@@ -254,7 +242,7 @@ p {
   opacity: 0;
   font-size: 9pt;
   margin-top: 85px;
- 
+
   -webkit-transition: all .55s ease;
   -moz-transition: all .55s ease;
   -ms-transition: all .55s ease;
@@ -263,52 +251,52 @@ p {
 }
 
 .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-    outline: none;
-    opacity: 1;
-    margin-left: -50px;
-  }
- 
-  .container-4:hover button.icon:hover{
-    background: white;
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.container-4:hover button.icon:hover{
+  background: white;
+}
+
+h1 {
+  font-size: 1.500em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.500em;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+}
+
+p {
+  font-size: 1.000em;
+  margin: 9px;
+  margin-left: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 1000px) {
+  nav {
+    background-color: rgba(18, 18, 48, 0.91);
+    width: 20%;
+    height: 100%;
+    left: -20%;
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    z-index: 1;
   }
 
-  h1 {
-    font-size: 1.500em;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    text-align: center;
+  input[type='checkbox']:checked ~ nav {
+    transform: translateX(100%);
   }
-  
-  h2 {
-    font-size: 1.500em;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px;
-  }
-
-  p {
-    font-size: 1.000em;
-    margin: 9px;
-    margin-left: 30px;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  @media screen and (min-width: 1000px) {
-    nav {
-      background-color: rgba(18, 18, 48, 0.91);
-      width: 20%;
-      height: 100%;
-      left: -20%;
-      transition: all .5s;
-      position: fixed;
-      top: 0;
-      z-index: 1;
-    }
-  
-    input[type='checkbox']:checked ~ nav {
-      transform: translateX(100%);
-    }
-  }
+}
