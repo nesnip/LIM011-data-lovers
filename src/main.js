@@ -75,4 +75,3 @@ filteredProfesorsMenu.addEventListener('click', () => {
   console.log(filteredProfesors);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filteredProfesors);
 });
-
