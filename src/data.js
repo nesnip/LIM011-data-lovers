@@ -10,9 +10,7 @@ export const showPotterCharacters = (data) => {
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
-          <div>
-            <h2 class="fontNameCharacter">${obj.name}</h2>
-          </div>
+          <h2 class="fontNameCharacter">${obj.name}</h2>
         </div>
         <div class="flip-card-back">
           <h1>${obj.name}</h1>
