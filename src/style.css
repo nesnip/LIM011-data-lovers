@@ -283,7 +283,7 @@ div > li {
 .container-4 input#search{
   width: 210px;
   height: 40px;
-  margin-top: 85px;
+  margin-top: 0px;
   margin-left: 35px;
   background: #2b303b;
   border: none;
@@ -327,7 +327,7 @@ div > li {
   color: #4f5b66;
   opacity: 0;
   font-size: 9pt;
-  margin-top: 85px;
+  margin-top: 0px;
 
   -webkit-transition: all .55s ease;
   -moz-transition: all .55s ease;
@@ -564,31 +564,80 @@ div > li {
     margin-left: 10%;
   }
 
-  /*Esto es para el buscador del menu principal*/
-
-  .container-4{
-    overflow: hidden;
-    width: 90%;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-
-  .container-4 input#search{
-    width: 80%;
-    height: 40px;
-    margin-top: 85px;
-    margin-left: 35px;
-    background: #2b303b;
-    border: none;
-    font-size: 9pt;
-    float: left;
-    color: #fff;
-    padding-left: 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-  }
+ /* Esto son los estilos del buscador del menu */
+  
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
+
+.container-4 input#search{
+  width: 210px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 35px;
+  background: #2b303b;
+  border: none;
+  font-size: 9pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-4 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-4 input#search:-ms-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: #232833;
+  height: 40px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 9pt;
+  margin-top: 20px;
+
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.container-4:hover button.icon:hover{
+  background: white;
+} }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -721,4 +770,79 @@ div > li {
     margin: 3px;
     margin-left: 38px;
   }
+
+ /* Esto son los estilos del buscador del menu */
+  
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.container-4 input#search{
+  width: 210px;
+  height: 40px;
+  margin-top: 18px;
+  margin-left: 35px; /* Se modifica medida para que el input se vea centrado y al medio*/
+  background: #2b303b;
+  border: none;
+  font-size: 9pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-4 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-4 input#search:-ms-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border: none;
+  background: #232833;
+  height: 40px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 9pt;
+  margin-top: 18px; /* Se modifica medida para que el input se vea centrado y al medio*/
+
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.container-4:hover button.icon:hover{
+  background: white;
+}
 }
