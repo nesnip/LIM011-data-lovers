@@ -1,33 +1,16 @@
-/* Manejo de data */
 
-// esta es una función de ejemplo
-
-export const showPotterCharacters = (data) => {
-  let templatePotter = '';
-  data.map((obj) => {
-    templatePotter += `
-    <div class="card flex-container flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
-          <h2 class="fontNameCharacter">${obj.name}</h2>
-        </div>
-        <div class="flip-card-back">
-          <h1>${obj.name}</h1>
-          <p>Nacimiento: ${obj.dateOfBirth}</p>
-          <p>Especie: ${obj.species}</p>
-          <p>Estatus de sangre: ${obj.ancestry}</p>
-          <p>Casa: ${obj.house}</p>
-          <p>Patronus: ${obj.patronus}</p>
-          <p>Varita:</p>
-          <li>Madera: ${obj.wand.wood}</li>
-          <li>Núcleo: ${obj.wand.core}</li>
-          <li>Largo: ${obj.wand.length}</li>
-          <p>Actor: ${obj.actor}</p>
-        </div>
-      </div>
-    </div>`;
-  });
-  return templatePotter;
+export const orderAscDescByName = (array, string1) => {
+  const arrAsc = [...array];
+  if (string1 === 'A-Z') {
+    const newArray = arrAsc.map(obj => obj.name).sort().map(string2 => arrAsc.find(obj => obj.name === string2));
+  return newArray;
+  } else {
+  const newArray = arrAsc.map(obj => obj.name).sort().reverse().map(string => arrAsc.find(obj => obj.name === string));
+  return newArray;
+  }
 };
 
+export const orderByGender = (array, string1) => {
+  const arrayByGender = [...array];
+  if (string1 === )
+}
