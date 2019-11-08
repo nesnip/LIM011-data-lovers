@@ -17,11 +17,28 @@ body {
   display: none;
 }
 
+/* Estilos de logos*/
+
 .HPLogo {
   width: 50%;
   display:block;
   margin:auto;
   padding: 10px;
+}
+
+.HPLogoAlterno {
+  width: 14%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Estilos de los titulos de las pantallas */
+
+#titlesOcupation {
+  font-family: 'Marcellus SC';
+  font-size: 50px;
+  color: #ffffff;
 }
 
 /* Estilos del menu principal*/
@@ -60,7 +77,7 @@ a {
   padding: 20px 5px;
 }
 
-#menu_general li:hover a, #menu_general li a:focus {
+#principalMenuCategorie li:hover a, #principalMenuCategorie li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
@@ -103,14 +120,45 @@ a {
   line-height: 5px;
 }
 
-#menu_general li li a:hover, #menu_general li li a:focus{
+/* #menu_general li li a:hover, #menu_general li li a:focus{
   background: rgba(119, 136, 153, 0.95);
   color: #300E4A;
-}
-
+}  */
+/* 
 #menu_general li:hover a, #menu_general li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
+} */
+
+/* Estilos del icono del menu*/
+
+.iconMenu1 {
+  width: 5.5%;
+  margin-left: 100px;
+  align-items: center;
+}
+
+.iconMenu2 {
+  width: 5.5%;
+  margin-left: 144px;
+  align-items: center;
+}
+
+/*Estilo del logo alterno del Menu */
+
+.alternLogoMenu {
+  width: 37%;
+  margin-left: 220px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/*Estilos del filtro */
+
+
+#filterCategories {
+  padding: 20px;
+  text-align: end;
 }
 
 #filterSelection {
@@ -123,10 +171,22 @@ a {
   width: 100px;
 }
 
-#filterCategories {
+#filterStudents, #filterProfesors {
   padding: 20px;
   text-align: end;
 }
+
+#secondFilter, #thirdFilter {
+  text-align: center;
+  background: #300E4A;
+  border-radius: 7px;
+  border-color: #300e4a;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+/* Estilos de los cards de personajes*/
 
 .flex-container {
   display: flex;
