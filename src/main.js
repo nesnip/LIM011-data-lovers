@@ -4,12 +4,47 @@
  * import POTTER from './data/potter/potter.js'
  */
 import POTTER from './data/potter/potter.js';
-import { showPotterCharacters } from './data.js';
+
+function showPotterCharacters (data) {
+  let templatePotter = '';
+  data.map((obj) => {
+    templatePotter += `
+    <div class="card flex-container flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src = '${obj.image}' alt = "Image" class="photoCharacter"/>
+          <h2 class="fontNameCharacter">${obj.name}</h2>
+        </div>
+        <div class="flip-card-back">
+          <h1>${obj.name}</h1>
+          <p>Nacimiento: ${obj.dateOfBirth}</p>
+          <p>Especie: ${obj.species}</p>
+          <p>Estatus de sangre: ${obj.ancestry}</p>
+          <p>Casa: ${obj.house}</p>
+          <p>Patronus: ${obj.patronus}</p>
+          <p>Varita:</p>
+          <li>Madera: ${obj.wand.wood}</li>
+          <li>Núcleo: ${obj.wand.core}</li>
+          <li>Largo: ${obj.wand.length}</li>
+          <p>Actor: ${obj.actor}</p>
+        </div>
+      </div>
+    </div>`;
+  });
+  return templatePotter;
+};
 
 document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(POTTER);
 
-const filterSelection = document.querySelector('#filterSelection');
+import { orderAscDescByName } from './data.js';
 
+const filterSelection = document.querySelector('#filterSelection');
+filterSelection.addEventListener('change', () => {
+  const orderByName = orderAscDescByName(POTTER, filterSelection.value);
+  document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(orderByName);
+});
+
+/*
 filterSelection.addEventListener('change', () => {
   if (filterSelection.value == 'A-Z') {
     const arrAsc = [...POTTER] //... operador que junta los elementos de un array en un nuevo array
@@ -48,8 +83,8 @@ filterSelection.addEventListener('change', () => {
     const filteredRavenclaw = [...POTTER].filter(item => item.house === 'Ravenclaw');
     console.log(filteredRavenclaw);
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredRavenclaw);
-  } */
-});
+  } });*/
+
 
 const filteredStudentsMenu = document.querySelector('#subOption1');
 const filteredProfesorsMenu = document.querySelector('#subOption2');
