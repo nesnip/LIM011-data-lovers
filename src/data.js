@@ -23,7 +23,6 @@ export const showPotterCharacters = (data) => {
           <li>Madera: ${obj.wand.wood}</li>
           <li>Núcleo: ${obj.wand.core}</li>
           <li>Largo: ${obj.wand.length}</li>
-          <p>Ocupación:</p>
           <p>Actor: ${obj.actor}</p>
         </div>
       </div>

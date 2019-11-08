@@ -59,6 +59,7 @@ const potterProfesors = document.querySelector('#potterProfesors');
 
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  potterProfesors.classList.add('hide');
   potterStudents.classList.remove('hide');
   potterProfesors.classList.add('hide');
   const filteredStudents = [...POTTER].filter(item => item.hogwartsStudent === true);
