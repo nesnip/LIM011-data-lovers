@@ -10,7 +10,7 @@ export const orderAscDescByName = (array, string1) => {
   }
 };
 
-export const orderByGender = (array, string1) => {
-  const arrayByGender = [...array];
-  if (string1 === )
-}
+// export const orderByGender = (array, string1) => {
+//   const arrayByGender = [...array];
+//   if (string1 === )
+// }
