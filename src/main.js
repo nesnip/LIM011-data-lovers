@@ -1,13 +1,15 @@
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * import POTTER from './data/potter/potter.js'
- */
 import POTTER from './data/potter/potter.js';
 import { orderAscDescByName, filterFemMale, filterHogwartsStudents, filterHogwartsProfesors } from './data.js';
 
-
 const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
+const filteredStudentsMenu = document.querySelector('#subOption1');
+const filteredProfesorsMenu = document.querySelector('#subOption2');
+const principalContainer = document.querySelector('#principalContainer');
+const potterStudents = document.querySelector('#potterStudents');
+const potterProfesors = document.querySelector('#potterProfesors');
+const filterSelection = document.querySelector('#filterSelection');
+const secondFilter = document.querySelector('#secondFilter');
+const thirdFilter = document.querySelector('#thirdFilter');
 
 function showPotterCharacters (data) {
   let templatePotter = '';
@@ -40,23 +42,12 @@ function showPotterCharacters (data) {
 
 insertPotterCharacter.innerHTML = showPotterCharacters(POTTER);
 
-
-const filterSelection = document.querySelector('#filterSelection');
 filterSelection.addEventListener('change', () => {
   const orderByName = orderAscDescByName(POTTER, filterSelection.value);
   insertPotterCharacter.innerHTML = showPotterCharacters(orderByName);
   const filterByGender = filterFemMale(POTTER, filterSelection.value);
   insertPotterCharacter.innerHTML = showPotterCharacters(filterByGender);
-
 });
-
-const filteredStudentsMenu = document.querySelector('#subOption1');
-const filteredProfesorsMenu = document.querySelector('#subOption2');
-const principalContainer = document.querySelector('#principalContainer');
-const potterStudents = document.querySelector('#potterStudents');
-const potterProfesors = document.querySelector('#potterProfesors');
-const secondFilter = document.querySelector('#secondFilter');
-const thirdFilter = document.querySelector('#thirdFilter');
 
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
@@ -65,6 +56,12 @@ filteredStudentsMenu.addEventListener('click', () => {
   potterProfesors.classList.add('hide');
   const filterByStudent = filterHogwartsStudents(POTTER);
   document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(filterByStudent);
+  secondFilter.addEventListener('change', () => {
+    const orderAscDesc = orderAscDescByName(filterByStudent, secondFilter.value);
+    document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(orderAscDesc);
+    const genderFilter = filterFemMale(filterByStudent, secondFilter.value);
+    document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(genderFilter);
+  });
 });
 
 filteredProfesorsMenu.addEventListener('click', () => {
@@ -73,49 +70,17 @@ filteredProfesorsMenu.addEventListener('click', () => {
   potterProfesors.classList.remove('hide');
   const filterByStaff = filterHogwartsProfesors(POTTER);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filterByStaff);
-});
-
-secondFilter.addEventListener('change', () => {
-  const filterByStudent = filterHogwartsStudents(POTTER);
-  const orderAscDesc = orderAscDescByName(filterByStudent, secondFilter.value);
-  document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(orderAscDesc);
-  const genderFilter = filterFemMale(filterByStudent, secondFilter.value);
-  document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(genderFilter);
-});
-
-thirdFilter.addEventListener('change', () => {
-  const filterByStaff = filterHogwartsProfesors(POTTER);
-  const ascDescOrder = orderAscDescByName(filterByStaff, thirdFilter.value);
-  document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(ascDescOrder);
-  const genderStaff = filterFemMale(filterByStaff, thirdFilter.value);
-  document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(genderStaff);
+  thirdFilter.addEventListener('change', () => {
+    const ascDescOrder = orderAscDescByName(filterByStaff, thirdFilter.value);
+    document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(ascDescOrder);
+    const genderStaff = filterFemMale(filterByStaff, thirdFilter.value);
+    document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(genderStaff);
+  });
 });
 
 
-/*
-filterSelection.addEventListener('change', () => {
-  if (filterSelection.value == 'A-Z') {
-    const arrAsc = [...POTTER] //... operador que junta los elementos de un array en un nuevo array
-    .map(item => item.name)
-    .sort()
-    .map(name => [...POTTER].find(it => it.name === name));
-    console.log(arrAsc);
-    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(arrAsc);
-  } else if (filterSelection.value == 'Z-A') {
-    const arrDesc = [...POTTER].map(item => item.name)
-      .sort().reverse()
-      .map(name => [...POTTER].find(it => it.name === name));
-    console.log(arrDesc);
-    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(arrDesc);
-  } else if (filterSelection.value == 'Femenino') {
-    const filteredFemale = [...POTTER].filter(item => item.gender === 'female');
-    console.log(filteredFemale);
-    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredFemale);
-  } else if (filterSelection.value == 'Masculino') {
-    const filteredMale = [...POTTER].filter(item => item.gender === 'male');
-    console.log(filteredMale);
-    document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredMale);
-  } /* else if (filterSelection.value == 'Gryffindor') {
+
+/* else if (filterSelection.value == 'Gryffindor') {
     const filteredGryffindor =  [...POTTER].filter(item => item.house === 'Gryffindor');
     console.log(filteredGryffindor);
     document.querySelector('#insertPotterCharacter').innerHTML = showPotterCharacters(filteredGryffindor);
