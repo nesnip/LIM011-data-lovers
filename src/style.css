@@ -20,14 +20,14 @@ body {
 /* Estilos de logos*/
 
 .HPLogo {
-  width: 50%;
+  width: 60%;
   display:block;
-  margin:auto;
+  margin: auto;
   padding: 10px;
 }
 
 .HPLogoAlterno {
-  width: 14%;
+  width: 55%;
   display: block;
   margin: auto;
   padding: 10px;
@@ -37,7 +37,7 @@ body {
 
 #titlesOcupation {
   font-family: 'Marcellus SC';
-  font-size: 50px;
+  font-size: 40px;
   color: #ffffff;
 }
 
@@ -48,7 +48,7 @@ nav {
   width: 100%;
   height: 100%;
   left: -100%;
-  transition: all .5s;
+  transition: all 0.5s;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -74,7 +74,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   display: block;
-  padding: 20px 5px;
+  padding: 20px 40px;
 }
 
 #principalMenuCategorie li:hover a, #principalMenuCategorie li a:focus {
@@ -84,7 +84,6 @@ a {
 
 #principalMenuCategorie {
   font-size: 0.813em;
-  margin-left: 35px;
 }
 
 #principalMenuList {
@@ -155,24 +154,24 @@ a {
 
 /*Estilos del filtro */
 
-
 #filterCategories {
-  padding: 20px;
   text-align: end;
 }
 
 #filterSelection {
-  text-align: center;
   background: #300E4A;
   border-radius: 7px;
   border-color: #300e4a;
   color: #ffffff;
-  padding: 10px;
-  width: 100px;
+  padding: 5px;
+  margin: 20px 20px;
+}
+
+option {
+  font-size: 11px;
 }
 
 #filterStudents, #filterProfesors {
-  padding: 20px;
   text-align: end;
 }
 
@@ -182,31 +181,31 @@ a {
   border-radius: 7px;
   border-color: #300e4a;
   color: #ffffff;
-  padding: 10px;
-  width: 100px;
+  padding: 5px;
+  margin: 20px 20px;
 }
 
 /* Estilos de los cards de personajes*/
 
-.flex-container {
+#insertPotterCharacter, #insertPotterStudents, #insertPotterProfesors {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
 }
 
 .photoCharacter {
   display: inline-block;
   width: 55%;
-  height: 210px;
-  margin-top: 65px;
+  height: 200px;
+  margin: 65px auto auto;
 }
 
 .flip-card {
   width: 300px;
-  height: 300px;
-  perspective: 1000px;
+  height: 420px;
   padding: 20px;
-  margin-bottom: 150px;
+  margin: 10px;
 }
 
 .flip-card-inner {
@@ -225,7 +224,7 @@ a {
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
-  height: 158%;
+  height: 100%; /* 410.7px */
   backface-visibility: hidden;
   border-radius: 15px;
 }
@@ -243,8 +242,7 @@ a {
 
 h1 {
   font-size: 1.500em;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin: 20px 20px 20px;
   text-align: center;
 }
 
@@ -252,13 +250,12 @@ h2 {
   font-size: 1.500em;
   color: #ffffff;
   text-align: center;
-  padding: 25px;
+  margin: 20px 65px;
 }
 
 p {
   font-size: 1.000em;
-  margin: 9px;
-  margin-left: 30px;
+  margin: 9px 20px;
 }
 
 li {
@@ -278,6 +275,7 @@ div > li {
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
+  margin: 20px 0px;
 }
 
 .container-4 input#search{
@@ -353,496 +351,124 @@ div > li {
 @media (min-width: 768px) {
   nav {
     background-color: rgba(18, 18, 48, 0.91);
-    width: 50%;
+    width: 40%;
     height: 100%;
-    left: -50%;
-    transition: all .5s;
+    left: -40%;
+    transition: all 0.5s;
     position: fixed;
     top: 0;
     z-index: 1;
-  }
-
-  input[type='checkbox'] {
-    display: none;
   }
 
   input[type='checkbox']:checked ~ nav {
     transform: translateX(100%);
   }
 
-  /* Orden de las tarjetas */
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    float: left;
-  }
-
-  .photoCharacter {
-    display: inline-block;
-    width: 55%;
-    height: 208px;
-    margin-top: 15%;
-  }
-
-  .flip-card {
-    width: 50%;
-    height: 17em;
-    perspective: 1000px;
-    padding: 20px;
-    margin-bottom: 150px;
-    flex-wrap: wrap;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 155%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-  }
-
-  .flip-card-front {
-    background-color: rgba(119,136,153,0.95);
-  }
-
-  .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-    background-color: rgba(119,136,153,0.95);
-    text-align: justify;
-  }
-
-  /* Contenido del flip-card-back */
-  h1 {
-    font-size: 1.500em;
-    margin: 7% auto 4%;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.500em;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px;
-  }
-
-  p {
-    font-size: 1.00em;
-    margin: 2%;
-    margin-left: 10%;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  div > li {
-    font-size: 0.900em;
-    margin: 1%;
-    margin-left: 15%;
+  .alternLogoMenu {
+    margin-left: 190px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    width: 70%;
+  }
+
+  header {
+    width: 30%;
+  }
+
+  .HPLogoAlterno {
+    width: 40%;
+  }
+
+  .alternLogoMenu {
+    margin-left: 170px;
+  }
+
   nav {
     background-color: rgba(18, 18, 48, 0.91);
-    width: 25%;
+    width: 30%;
     height: 100%;
-    left: -25%;
-    transition: all .5s;
+    left: -0px;
+    transition: all 0.5s;
     position: fixed;
     top: 0;
     z-index: 1;
   }
 
-  input[type='checkbox'] {
-    display: none;
-  }
-
   input[type='checkbox']:checked ~ nav {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
-  /* Orden de las tarjetas */
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    float: left;
+  /* Estilos del icono del menu*/
+
+  .iconMenu1 {
+    margin-left: 35%;
   }
 
-  .photoCharacter {
-    display: inline-block;
-    width: 55%;
-    height: 180px;
-    margin-top: 25%;
+  .iconMenu2 {
+    margin-left: 57%;
   }
 
-  .flip-card {
-    width: 25%;
-    height: 17em;
-    perspective: 1000px;
-    padding: 20px;
-    margin-bottom: 150px;
-    flex-wrap: wrap;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 155%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-  }
-
-  .flip-card-front {
-    background-color: rgba(119,136,153,0.95);
-  }
-
-  .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-    background-color: rgba(119,136,153,0.95);
-    text-align: justify;
-  }
-
-  /* Contenido del flip-card-back */
-  h1 {
-    font-size: 1.500em;
-    margin: 8%;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.500em;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px;
-  }
-
-  p {
-    font-size: 0.900em;
-    margin: 2%;
-    margin-left: 5%;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  div > li {
-    font-size: 0.890em;
-    margin: 1%;
-    margin-left: 10%;
-  }
-
- /* Esto son los estilos del buscador del menu */
-  
-.container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
 }
-
-.container-4 input#search{
-  width: 210px;
-  height: 40px;
-  margin-top: 20px;
-  margin-left: 35px;
-  background: #2b303b;
-  border: none;
-  font-size: 9pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.container-4 input#search::-webkit-input-placeholder {
-  color: #65737e;
-}
-
-.container-4 input#search:-moz-placeholder { /* Firefox 18- */
-  color: #65737e;
-}
-
-.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
-  color: #65737e;
-}
-
-.container-4 input#search:-ms-input-placeholder {
-  color: #65737e;
-}
-
-.container-4 button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  border: none;
-  background: #232833;
-  height: 40px;
-  width: 50px;
-  color: #4f5b66;
-  opacity: 0;
-  font-size: 9pt;
-  margin-top: 20px;
-
-  -webkit-transition: all .55s ease;
-  -moz-transition: all .55s ease;
-  -ms-transition: all .55s ease;
-  -o-transition: all .55s ease;
-  transition: all .55s ease;
-}
-
-.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-  outline: none;
-  opacity: 1;
-  margin-left: -50px;
-}
-
-.container-4:hover button.icon:hover{
-  background: white;
-} }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  header {
+    width: 20%;
+  }
+
+  .HPLogoAlterno {
+    width: 40%;
+  }
+
+  .alternLogoMenu {
+    margin-left: 170px;
+  }
 
   nav {
     background-color: rgba(18, 18, 48, 0.91);
-    width: 25%;
+    width: 20%;
     height: 100%;
-    left: -25%;
-    transition: all .5s;
+    left: -0px;
+    transition: all 0.5s;
     position: fixed;
     top: 0;
     z-index: 1;
   }
 
-  input[type='checkbox'] {
-    display: none;
-  }
-
   input[type='checkbox']:checked ~ nav {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    float: left;
+  /* Estilos del icono del menu*/
+
+  .iconMenu1 {
+    width: 5.5%;
+    margin-left: 30%;
+    align-items: center;
   }
 
-  .photoCharacter {
-    display: inline-block;
-    width: 55%;
-    height: 210px;
-    margin-top: 65px;
+  .iconMenu2 {
+    width: 5.5%;
+    margin-left: 60%;
+    align-items: center;
   }
-
-  .flip-card {
-    width: 25%;
-    height: 300px;
-    perspective: 1000px;
-    padding: 20px;
-    margin-bottom: 150px;
-    flex-wrap: wrap;
-  }
-
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 158%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-  }
-
-  .flip-card-front {
-    background-color: rgba(119,136,153,0.95);
-  }
-
-  .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-    background-color: rgba(119,136,153,0.95);
-    text-align: justify;
-  }
-
-  /*Esto es para el buscador del menu principal*/
-
-  .container-4{
-    overflow: hidden;
-    width: 90%;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-
-  .container-4 input#search{
-    width: 210px;
-    height: 40px;
-    margin-top: 85px;
-    margin-left: 35px;
-    background: #2b303b;
-    border: none;
-    font-size: 9pt;
-    float: left;
-    color: #fff;
-    padding-left: 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-  }
-
-  h1 {
-    font-size: 1.500em;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.500em;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px;
-  }
-
-  p {
-    font-size: 1.000em;
-    margin: 9px;
-    margin-left: 30px;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  div > li {
-    font-size: 1.000em;
-    margin: 3px;
-    margin-left: 38px;
-  }
-
- /* Esto son los estilos del buscador del menu */
-  
-.container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.container-4 input#search{
-  width: 210px;
-  height: 40px;
-  margin-top: 18px;
-  margin-left: 35px; /* Se modifica medida para que el input se vea centrado y al medio*/
-  background: #2b303b;
-  border: none;
-  font-size: 9pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.container-4 input#search::-webkit-input-placeholder {
-  color: #65737e;
-}
-
-.container-4 input#search:-moz-placeholder { /* Firefox 18- */
-  color: #65737e;
-}
-
-.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
-  color: #65737e;
-}
-
-.container-4 input#search:-ms-input-placeholder {
-  color: #65737e;
-}
-
-.container-4 button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  border: none;
-  background: #232833;
-  height: 40px;
-  width: 50px;
-  color: #4f5b66;
-  opacity: 0;
-  font-size: 9pt;
-  margin-top: 18px; /* Se modifica medida para que el input se vea centrado y al medio*/
-
-  -webkit-transition: all .55s ease;
-  -moz-transition: all .55s ease;
-  -ms-transition: all .55s ease;
-  -o-transition: all .55s ease;
-  transition: all .55s ease;
-}
-
-.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-  outline: none;
-  opacity: 1;
-  margin-left: -50px;
-}
-
-.container-4:hover button.icon:hover{
-  background: white;
-}
 }
