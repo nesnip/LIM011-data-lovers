@@ -35,7 +35,7 @@ body {
 
 /* Estilos de los titulos de las pantallas */
 
-#titlesOcupation {
+.titlesOcupation {
   font-family: 'Marcellus SC';
   font-size: 40px;
   color: #ffffff;
@@ -77,12 +77,12 @@ a {
   padding: 20px 40px;
 }
 
-#principalMenuCategorie li:hover a, #principalMenuCategorie li a:focus {
+.principalMenuCategorie li:hover a, .principalMenuCategorie li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }
 
-#principalMenuCategorie {
+.principalMenuCategorie {
   font-size: 0.813em;
 }
 
@@ -123,7 +123,7 @@ a {
   background: rgba(119, 136, 153, 0.95);
   color: #300E4A;
 }  */
-/* 
+/*
 #menu_general li:hover a, #menu_general li a:focus {
   background-color: rgba(119, 136, 153, 0.95);
   color: #300E4A;
