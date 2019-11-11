@@ -56,6 +56,7 @@ const principalContainer = document.querySelector('#principalContainer');
 const potterStudents = document.querySelector('#potterStudents');
 const potterProfesors = document.querySelector('#potterProfesors');
 const secondFilter = document.querySelector('#secondFilter');
+const thirdFilter = document.querySelector('#thirdFilter');
 
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
@@ -78,6 +79,16 @@ secondFilter.addEventListener('change', () => {
   const filterByStudent = filterHogwartsStudents(POTTER);
   const orderAscDesc = orderAscDescByName(filterByStudent, secondFilter.value);
   document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(orderAscDesc);
+  const genderFilter = filterFemMale(filterByStudent, secondFilter.value);
+  document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(genderFilter);
+});
+
+thirdFilter.addEventListener('change', () => {
+  const filterByStaff = filterHogwartsProfesors(POTTER);
+  const ascDescOrder = orderAscDescByName(filterByStaff, thirdFilter.value);
+  document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(ascDescOrder);
+  const genderStaff = filterFemMale(filterByStaff, thirdFilter.value);
+  document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(genderStaff);
 });
 
 
