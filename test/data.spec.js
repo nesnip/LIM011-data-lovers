@@ -8,7 +8,8 @@ describe('orderAscDescByName', () => {
 
   describe('Es una funcion que ordena Ascendente y Descendente', () => {
     const input = [{ name: 'Harry Potter' }, { name: 'Hermione Granger' }, { name: 'Ron Weasley' }, { name: 'Draco Malfoy' }];
-    const output = [{ name: 'Draco Malfoy' }, { name: 'Harry Potter' }, { name: 'Hermione Granger' }, { name: 'Ron Weasley' }];
-    expect(orderAscDescByName(input)).toEqual(output, output.reverse());
+    const output1 = [{ name: 'Draco Malfoy' }, { name: 'Harry Potter' }, { name: 'Hermione Granger' }, { name: 'Ron Weasley' }];
+    const output2 = [{ name: 'Ron Weasley' }, { name: 'Hermione Granger' }, { name: 'Harry Potter' }, { name: 'Draco Malfoy' }];
+    expect(orderAscDescByName(input)).toEqual(output1, output2);
   });
 });
