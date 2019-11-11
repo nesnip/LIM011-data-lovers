@@ -14,11 +14,11 @@
   <body>
 
     <header>
-      <input type='checkbox' id='chec'>
+      <input type="checkbox" id="chec">
       <label for="chec">
-        <img class='object hamburguer move-right' src="img\mdi_menu.png">
+        <img class="object hamburguer move-right" src="img\mdi_menu.png">
       </label>
-    
+
       <nav id="menu_general">
         <img src="img\LOGO ALTERNO HPW.png" class="alternLogoMenu">
 
@@ -28,28 +28,28 @@
         </div>
 
         <ul id="principalMenuList">
-          <li id="principalMenuCategorie"><a href="#">Ocupacion <img src="img\plus-menu.png" class="iconMenu1"></a>
-            <ul id="subCategories">
+          <li class="principalMenuCategorie"><a href="#">Ocupacion <img src="img\plus-menu.png" class="iconMenu1"></a>
+            <ul>
               <li><a href="#" id="subOption1">Estudiantes</a></li>
               <li><a href="#" id="subOption2">Profesores</a></li>
             </ul>
           </li>
-          <li id="principalMenuCategorie"><a href="#">Varitas</a></li>
-          <li id="principalMenuCategorie"><a href="#">Casas<img src="img\plus-menu.png" class="iconMenu2"></a>
-            <ul id="subCategories">
+          <li class="principalMenuCategorie"><a href="#">Varitas</a></li>
+          <li class="principalMenuCategorie"><a href="#">Casas<img src="img\plus-menu.png" class="iconMenu2"></a>
+            <ul>
               <li><a href="#">Gryffindor</a></li>
               <li><a href="#">Slytherin</a></li>
               <li><a href="#">Hufflepuff</a></li>
               <li><a href="#">Ravenclaw</a></li>
             </ul>
           </li>
-          <li id="principalMenuCategorie"><a href="#">Hechizos</a></li>
+          <li class="principalMenuCategorie"><a href="#">Hechizos</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div id='principalContainer'>
+      <div id="principalContainer">
         <img src="img\LOGO HPW.png" class="HPLogo">
         <div id="filterCategories">
           <select id="filterSelection">
@@ -69,10 +69,10 @@
 
       <div class="hide" id="potterStudents">
         <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
-        <h1 id="titlesOcupation">Estudiantes</h1>
+        <h1 class="titlesOcupation">Estudiantes</h1>
         <div id="filterStudents">
           <select id="secondFilter">
-            <option hidden selected> F I L T R O
+            <option hidden selected> F I L T R O </option>
             <optgroup label="Ordenar">
               <option value="A-Z"> A - Z </option>
               <option value="Z-A"> Z - A </option>
@@ -86,12 +86,12 @@
         <div id="insertPotterStudents"></div>
       </div>
 
-      <div class="hide" id='potterProfesors'>
+      <div class="hide" id="potterProfesors">
           <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
-          <h1 id="titlesOcupation">Profesores</h1>
+          <h1 class="titlesOcupation">Profesores</h1>
         <div id="filterProfesors">
           <select id="thirdFilter">
-            <option hidden selected> F I L T R O
+            <option hidden selected> F I L T R O </option>
             <optgroup label="Ordenar">
               <option value="A-Z"> A - Z </option>
               <option value="Z-A"> Z - A </option>
