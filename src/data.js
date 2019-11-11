@@ -15,7 +15,7 @@ export const filterFemMale = (array, string1) => {
   const arrayByGender = [...array];
   if (string1 === 'Femenino') {
     return arrayByGender.filter((obj) => (obj).gender === 'female');
-  } else if (string1 === 'Masculino') {
+  } if (string1 === 'Masculino') {
     return arrayByGender.filter((obj) => (obj).gender === 'male');
   }
 };
