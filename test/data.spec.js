@@ -1,13 +1,15 @@
 // importamos la función `example`
-import { example } from "../src/data";
+import { orderAscDescByName } from "../src/data";
 
-describe('example', () => {
+describe('orderAscDescByName', () => {
 
   it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof orderAscDescByName).toBe('function');
   });
 
-  describe('example', () => {
-    // escribe aquí tu test
+  describe('Es una funcion que ordena Ascendente y Descendente', () => {
+    const input = [{name: 'Harry Potter'}, {name: 'Hermione Granger'}, {name: 'Ron Weasley'}, {name: 'Draco Malfoy'}];
+    const output = [{name: 'Draco Malfoy'}, {name: 'Harry Potter'}, {name: 'Hermione Granger'}, {name: 'Ron Weasley'}];
+    expect(orderAscDescByName(input)).toEqual(output, output.reverse());
   });
 });
