@@ -55,6 +55,7 @@ const filteredProfesorsMenu = document.querySelector('#subOption2');
 const principalContainer = document.querySelector('#principalContainer');
 const potterStudents = document.querySelector('#potterStudents');
 const potterProfesors = document.querySelector('#potterProfesors');
+const secondFilter = document.querySelector('#secondFilter');
 
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
@@ -71,6 +72,12 @@ filteredProfesorsMenu.addEventListener('click', () => {
   potterProfesors.classList.remove('hide');
   const filterByStaff = filterHogwartsProfesors(POTTER);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filterByStaff);
+});
+
+secondFilter.addEventListener('change', () => {
+  const filterByStudent = filterHogwartsStudents(POTTER);
+  const orderAscDesc = orderAscDescByName(filterByStudent, secondFilter.value);
+  document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(orderAscDesc);
 });
 
 
