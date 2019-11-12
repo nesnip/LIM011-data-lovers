@@ -8,27 +8,29 @@ describe('filterHogwartsStudents', () => {
 
   it('Es una funcion que filtra estudiantes', () => {
     const input = [
-      { 
+      {
         name: 'Ron Weasley',
-        hogwartsStudent: true, 
-      }, { 
+        hogwartsStudent: true,
+      },
+      {
         name: 'Draco Malfoy',
-        hogwartsStudent: true, 
-      }, { 
+        hogwartsStudent: true,
+      },
+      {
         name: 'Minerva McGonagall',
         hogwartsStudent: false,
-        hogwartsStaff: true, 
       },
     ];
     const output = [
-      { 
+      {
         name: 'Ron Weasley',
         hogwartsStudent: true,
-      }, { 
+      },
+      {
         name: 'Draco Malfoy',
-        hogwartsStudent: true, 
+        hogwartsStudent: true,
       },
     ];
-    expect(filterHogwartsStudents(input)).toEqual(output); 
+    expect(filterHogwartsStudents(input)).toEqual(output);
   });
 });
