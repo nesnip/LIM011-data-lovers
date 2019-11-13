@@ -2,8 +2,8 @@
 
 export const orderAscDescByName = (array, string1) => {
   const arrAsc = [...array];
-  const newArray = arrAsc.map((obj) => obj.name).sort().map((string2) => arrAsc
-    .find((obj) => obj.name === string2));
+  const newArray = arrAsc.map((obj) => obj.name)
+    .sort().map((string2) => arrAsc.find((obj) => obj.name === string2));
   if (string1 === 'A-Z') {
     return newArray;
   } if (string1 === 'Z-A') {
