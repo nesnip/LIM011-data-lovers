@@ -6,8 +6,8 @@ describe('orderByNameAndGender', () => {
     expect(typeof orderByNameAndGender).toBe('function');
   });
 
-  it('es una función que ordena a los personajes por nombre en orden ascendente y descendente', () => {
-    const input = [
+  it('es una función que ordena a los personajes por nombre en orden o por genero', () => {
+    const input1 = [
       { name: 'Ron Weasley' },
       { name: 'Draco Malfoy' },
       { name: 'Minerva McGonagall' },
@@ -22,8 +22,48 @@ describe('orderByNameAndGender', () => {
       { name: 'Minerva McGonagall' },
       { name: 'Draco Malfoy' },
     ];
-    expect(orderByNameAndGender(input, 'A-Z')).toEqual(outputAsc);
-    expect(orderByNameAndGender(input, 'Z-A')).toEqual(outputDesc);
+    const input2 = [
+      {
+        name: 'Ron Weasley',
+        gender: 'male',
+      },
+      {
+        name: 'Draco Malfoy',
+        gender: 'male',
+      },
+      {
+        name: 'Hermione Granger',
+        gender: 'female',
+      },
+      {
+        name: 'Minerva McGonagall',
+        gender: 'female',
+      },
+    ];
+    const outputFem = [
+      {
+        name: 'Hermione Granger',
+        gender: 'female',
+      },
+      {
+        name: 'Minerva McGonagall',
+        gender: 'female',
+      },
+    ];
+    const outputMale = [
+      {
+        name: 'Ron Weasley',
+        gender: 'male',
+      },
+      {
+        name: 'Draco Malfoy',
+        gender: 'male',
+      },
+    ];
+    expect(orderByNameAndGender(input1, 'A-Z')).toEqual(outputAsc);
+    expect(orderByNameAndGender(input1, 'Z-A')).toEqual(outputDesc);
+    expect(orderByNameAndGender(input2, 'Femenino')).toEqual(outputFem);
+    expect(orderByNameAndGender(input2, 'Masculino')).toEqual(outputMale);
   });
 });
 
