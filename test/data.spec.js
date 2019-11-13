@@ -1,9 +1,9 @@
 // importamos la función `example`
-import { filterHogwartsStudents, orderAscDescByName } from '../src/data';
+import { filterHogwartsStudents, orderByNameAndGender } from '../src/data';
 
-describe('orderAscDescByName', () => {
+describe('orderByNameAndGender', () => {
   it('debería ser una función', () => {
-    expect(typeof orderAscDescByName).toBe('function');
+    expect(typeof orderByNameAndGender).toBe('function');
   });
 
   it('es una función que ordena a los personajes por nombre en orden ascendente y descendente', () => {
@@ -22,8 +22,8 @@ describe('orderAscDescByName', () => {
       { name: 'Minerva McGonagall' },
       { name: 'Draco Malfoy' },
     ];
-    expect(orderAscDescByName(input, 'A-Z')).toEqual(outputAsc);
-    expect(orderAscDescByName(input, 'Z-A')).toEqual(outputDesc);
+    expect(orderByNameAndGender(input, 'A-Z')).toEqual(outputAsc);
+    expect(orderByNameAndGender(input, 'Z-A')).toEqual(outputDesc);
   });
 });
 
