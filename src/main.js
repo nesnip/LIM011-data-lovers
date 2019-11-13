@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import POTTER from './data/potter/potter.js';
 import {
-  orderAscDescByName, filterFemMale, filterHogwartsStudents, filterHogwartsProfesors,
+  orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors,
 } from './data.js';
 
 const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
@@ -47,10 +47,8 @@ function showPotterCharacters(data) {
 insertPotterCharacter.innerHTML = showPotterCharacters(POTTER);
 
 filterSelection.addEventListener('change', () => {
-  const orderByName = orderAscDescByName(POTTER, filterSelection.value);
-  insertPotterCharacter.innerHTML = showPotterCharacters(orderByName);
-  const filterByGender = filterFemMale(POTTER, filterSelection.value);
-  insertPotterCharacter.innerHTML = showPotterCharacters(filterByGender);
+  const arrByNameOrGender = orderByNameAndGender(POTTER, filterSelection.value);
+  insertPotterCharacter.innerHTML = showPotterCharacters(arrByNameOrGender);
 });
 
 filteredStudentsMenu.addEventListener('click', () => {
@@ -61,10 +59,8 @@ filteredStudentsMenu.addEventListener('click', () => {
   const filterByStudent = filterHogwartsStudents(POTTER);
   document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(filterByStudent);
   secondFilter.addEventListener('change', () => {
-    const orderAscDesc = orderAscDescByName(filterByStudent, secondFilter.value);
-    document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(orderAscDesc);
-    const genderFilter = filterFemMale(filterByStudent, secondFilter.value);
-    document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(genderFilter);
+    const arrStudByNameGender = orderByNameAndGender(filterByStudent, secondFilter.value);
+    document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(arrStudByNameGender);
   });
 });
 
@@ -75,9 +71,7 @@ filteredProfesorsMenu.addEventListener('click', () => {
   const filterByStaff = filterHogwartsProfesors(POTTER);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filterByStaff);
   thirdFilter.addEventListener('change', () => {
-    const ascDescOrder = orderAscDescByName(filterByStaff, thirdFilter.value);
-    document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(ascDescOrder);
-    const genderStaff = filterFemMale(filterByStaff, thirdFilter.value);
-    document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(genderStaff);
+    const arrProfByNameGender = orderByNameAndGender(filterByStaff, thirdFilter.value);
+    document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(arrProfByNameGender);
   });
 });

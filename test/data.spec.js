@@ -1,36 +1,30 @@
 // importamos la función `example`
-import { filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';
+import { filterHogwartsStudents, orderByNameAndGender } from '../src/data';
 
-describe('filterHogwartsStudents', () => {
+describe('orderByNameAndGender', () => {
   it('debería ser una función', () => {
-    expect(typeof filterHogwartsStudents).toBe('function');
+    expect(typeof orderByNameAndGender).toBe('function');
   });
 
-  it('Es una funcion que filtra estudiantes', () => {
+  it('es una función que ordena a los personajes por nombre en orden ascendente y descendente', () => {
     const input = [
-      {
-        name: 'Ron Weasley',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Draco Malfoy',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Minerva McGonagall',
-        hogwartsStudent: false,
-      },
+      { name: 'Ron Weasley' },
+      { name: 'Draco Malfoy' },
+      { name: 'Minerva McGonagall' },
     ];
-    const output = [
-      {
-        name: 'Ron Weasley',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Draco Malfoy',
-        hogwartsStudent: true,
-      },
+    const outputAsc = [
+      { name: 'Draco Malfoy' },
+      { name: 'Minerva McGonagall' },
+      { name: 'Ron Weasley' },
     ];
-    expect(filterHogwartsStudents(input)).toEqual(output);
+    const outputDesc = [
+      { name: 'Ron Weasley' },
+      { name: 'Minerva McGonagall' },
+      { name: 'Draco Malfoy' },
+    ];
+    expect(orderByNameAndGender(input, 'A-Z')).toEqual(outputAsc);
+    expect(orderByNameAndGender(input, 'Z-A')).toEqual(outputDesc);
   });
 });
+
+import { filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';

@@ -1,22 +1,17 @@
 /* eslint-disable consistent-return */
 
-export const orderAscDescByName = (array, string1) => {
-  const arrAsc = [...array];
-  const newArray = arrAsc.map((obj) => obj.name).sort().map((string2) => arrAsc
-    .find((obj) => obj.name === string2));
+export const orderByNameAndGender = (array, string1) => {
+  const arrayData = [...array];
+  const newArray = arrayData.map((obj) => obj.name)
+    .sort().map((string2) => arrayData.find((obj) => obj.name === string2));
   if (string1 === 'A-Z') {
     return newArray;
   } else if (string1 === 'Z-A') {
     return newArray.reverse();
-  }
-};
-
-export const filterFemMale = (array, string1) => {
-  const arrayByGender = [...array];
-  if (string1 === 'Femenino') {
-    return arrayByGender.filter((obj) => (obj).gender === 'female');
-  } else if (string1 === 'Masculino') {
-    return arrayByGender.filter((obj) => (obj).gender === 'male');
+  } if (string1 === 'Femenino') {
+    return arrayData.filter((obj) => (obj).gender === 'female');
+  } if (string1 === 'Masculino') {
+    return arrayData.filter((obj) => (obj).gender === 'male');
   }
 };
 
