@@ -6,7 +6,7 @@ export const orderByNameAndGender = (array, string1) => {
     .sort().map((string2) => arrayData.find((obj) => obj.name === string2));
   if (string1 === 'A-Z') {
     return newArray;
-  } if (string1 === 'Z-A') {
+  } else if (string1 === 'Z-A') {
     return newArray.reverse();
   } if (string1 === 'Femenino') {
     return arrayData.filter((obj) => (obj).gender === 'female');
