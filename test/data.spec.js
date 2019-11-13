@@ -1,5 +1,5 @@
 // importamos la función `example`
-import { filterHogwartsStudents, orderByNameAndGender } from '../src/data';
+import { orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';
 
 describe('orderByNameAndGender', () => {
   it('debería ser una función', () => {
@@ -27,4 +27,71 @@ describe('orderByNameAndGender', () => {
   });
 });
 
-import { filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';
+describe('filterHogwartsStudents', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof filterHogwartsStudents).toBe('function');
+  });
+
+  it('es una funcion que filtra estudiantes', () => {
+    const input = [
+      {
+        name: 'Ron Weasley',
+        hogwartsStudent: true,
+      },
+      {
+        name: 'Draco Malfoy',
+        hogwartsStudent: true,
+      },
+      {
+        name: 'Minerva McGonagall',
+        hogwartsStudent: false,
+      },
+    ];
+    const output = [
+      {
+        name: 'Ron Weasley',
+        hogwartsStudent: true,
+      },
+      {
+        name: 'Draco Malfoy',
+        hogwartsStudent: true,
+      },
+    ];
+    expect(filterHogwartsStudents(input)).toEqual(output);
+  });
+});
+
+describe('filterHogwartsProfesors', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof filterHogwartsProfesors).toBe('function');
+  });
+
+  it('es una funcion que filtra staff', () => {
+    const input = [
+      {
+        name: 'Ron Weasley',
+        hogwartsStudent: true,
+        hogwartsStaff: false,
+      },
+      {
+        name: 'Minerva McGonagall',
+        hogwartsStaff: true,
+      },
+      {
+        name: 'Severus Snape',
+        hogwartsStaff: true,
+      },
+    ];
+    const output = [
+      {
+        name: 'Minerva McGonagall',
+        hogwartsStaff: true,
+      },
+      {
+        name: 'Severus Snape',
+        hogwartsStaff: true,
+      },
+    ];
+    expect(filterHogwartsProfesors(input)).toEqual(output);
+  });
+});
