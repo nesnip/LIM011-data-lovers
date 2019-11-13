@@ -1,5 +1,5 @@
 // importamos la función `example`
-import { filterHogwartsStudents } from '../src/data';
+import { filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';
 
 describe('filterHogwartsStudents', () => {
   it('debería ser una función', () => {
