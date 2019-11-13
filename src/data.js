@@ -10,9 +10,8 @@ export const orderByNameAndGender = (array, string1) => {
     return newArray.reverse();
   } if (string1 === 'Femenino') {
     return arrayData.filter((obj) => (obj).gender === 'female');
-  } if (string1 === 'Masculino') {
-    return arrayData.filter((obj) => (obj).gender === 'male');
   }
+  return arrayData.filter((obj) => (obj).gender === 'male');
 };
 
 export const filterHogwartsStudents = (array) => {

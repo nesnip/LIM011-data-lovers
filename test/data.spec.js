@@ -63,7 +63,7 @@ describe('orderByNameAndGender', () => {
     expect(orderByNameAndGender(input1, 'A-Z')).toEqual(outputAsc);
     expect(orderByNameAndGender(input1, 'Z-A')).toEqual(outputDesc);
     expect(orderByNameAndGender(input2, 'Femenino')).toEqual(outputFem);
-    expect(orderByNameAndGender(input2, 'Masculino')).toEqual(outputMale);
+    expect(orderByNameAndGender(input2, '')).toEqual(outputMale);
   });
 });
 
