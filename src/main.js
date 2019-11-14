@@ -75,3 +75,29 @@ filteredProfesorsMenu.addEventListener('click', () => {
     document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(arrProfByNameGender);
   });
 });
+
+/* const texto = document.querySelector('#search');
+const ponerBuscadosAqui = document.querySelector('#ponerBuscadosAqui');
+
+const searchCharacters = () => {
+  ponerBuscadosAqui.innerHTML = '';
+  const text = texto.value.toUpperCase();
+
+  for (const character of [...POTTER]) {
+    const nombre = character.name;
+    if (nombre.indexOf(text) !== -1) {
+      ponerBuscadosAqui.innerHTML += `
+        <div>${character.name}</div>
+      `;
+      console.log('hola');
+    }
+  }
+  if (ponerBuscadosAqui.innerHTML === '') {
+    ponerBuscadosAqui.innerHTML += `
+      <div>Resultado no encontrado</div>
+    `;
+    console.log('bye');
+  }
+};
+
+texto.addEventListener('input', searchCharacters); */
