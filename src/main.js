@@ -3,7 +3,10 @@
 /* eslint-disable import/extensions */
 import POTTER from './data/potter/potter.js';
 import {
-  orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors,
+  orderByNameAndGender,
+  filterHogwartsStudents,
+  filterHogwartsProfesors,
+  searchCharacters,
 } from './data.js';
 
 const insertPotterCharacter = document.querySelector('#insertPotterCharacter');
@@ -87,27 +90,8 @@ filteredProfesorsMenu.addEventListener('click', () => {
 });
 
 const texto = document.querySelector('#search');
-const ponerBuscadosAqui = document.querySelector('#ponerBuscadosAqui');
 
-const searchCharacters = () => {
-  ponerBuscadosAqui.innerHTML = '';
-  const text = texto.value.toUpperCase();
-
-  for (const character of [...POTTER]) {
-    const nombre = character.name;
-    if (nombre.indexOf(text) !== -1) {
-      ponerBuscadosAqui.innerHTML += `
-        <div>${character.name}</div>
-      `;
-      console.log('hola');
-    }
-  }
-  if (ponerBuscadosAqui.innerHTML === '') {
-    ponerBuscadosAqui.innerHTML += `
-      <div>Resultado no encontrado</div>
-    `;
-    console.log('bye');
-  }
-};
-
-texto.addEventListener('input', searchCharacters);
+texto.addEventListener('keyup', () => {
+  const arrSearchCharacter = searchCharacters(POTTER, texto.value);
+  insertPotterCharacter.innerHTML = showPotterCharacters(arrSearchCharacter);
+});
