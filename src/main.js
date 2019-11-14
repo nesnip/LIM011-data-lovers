@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable import/extensions */
 import POTTER from './data/potter/potter.js';
 import {
