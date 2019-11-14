@@ -76,7 +76,7 @@ filteredProfesorsMenu.addEventListener('click', () => {
   });
 });
 
-/* const texto = document.querySelector('#search');
+const texto = document.querySelector('#search');
 const ponerBuscadosAqui = document.querySelector('#ponerBuscadosAqui');
 
 const searchCharacters = () => {
@@ -100,4 +100,4 @@ const searchCharacters = () => {
   }
 };
 
-texto.addEventListener('input', searchCharacters); */
+texto.addEventListener('input', searchCharacters);
