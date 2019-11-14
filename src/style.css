@@ -24,13 +24,15 @@ body {
   display:block;
   margin: auto;
   padding: 10px;
+  cursor: pointer;
 }
 
 .HPLogoAlterno {
-  width: 55%;
+  width: 38%;
   display: block;
   margin: auto;
   padding: 10px;
+  cursor: pointer;
 }
 
 /* Estilos de los titulos de las pantallas */
@@ -386,11 +388,11 @@ div > li {
   }
 
   .HPLogoAlterno {
-    width: 40%;
+    width: 27%;
   }
 
   .alternLogoMenu {
-    margin-left: 170px;
+    margin-left: 200px;
   }
 
   nav {
@@ -436,7 +438,7 @@ div > li {
   }
 
   .HPLogoAlterno {
-    width: 40%;
+    width: 20%;
   }
 
   .alternLogoMenu {

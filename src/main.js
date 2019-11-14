@@ -13,6 +13,14 @@ const potterProfesors = document.querySelector('#potterProfesors');
 const filterSelection = document.querySelector('#filterSelection');
 const secondFilter = document.querySelector('#secondFilter');
 const thirdFilter = document.querySelector('#thirdFilter');
+const principalLogo = document.querySelector('.HPLogoAlterno');
+
+principalLogo.addEventListener('click', () => {
+  principalContainer.classList.remove('hide');
+  potterProfesors.classList.add('hide');
+  potterStudents.classList.add('hide');
+  potterProfesors.classList.add('hide');
+});
 
 function showPotterCharacters(data) {
   let templatePotter = '';
