@@ -25,3 +25,10 @@ export const filterHogwartsProfesors = (array) => {
   const newArrayByProfesor = arrayByProfesor.filter((obj) => (obj).hogwartsStaff === true);
   return newArrayByProfesor;
 };
+
+export const searchCharacters = (array, text) => {
+  const arrOfSearch = [...array];
+  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name.toUpperCase()
+    .indexOf(text.toUpperCase()) > -1);
+  return newArrOfSearch;
+};
