@@ -1,12 +1,14 @@
 // importamos la función `example`
-import { orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors } from '../src/data';
+import {
+  orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors, filterPotterHouse,
+} from '../src/data';
 
 describe('orderByNameAndGender', () => {
   it('debería ser una función', () => {
     expect(typeof orderByNameAndGender).toBe('function');
   });
 
-  it('es una función que ordena a los personajes por nombre en orden o por genero', () => {
+  it('es una función que ordena a los personajes por nombre o por genero', () => {
     const input1 = [
       { name: 'Ron Weasley' },
       { name: 'Draco Malfoy' },
@@ -133,5 +135,64 @@ describe('filterHogwartsProfesors', () => {
       },
     ];
     expect(filterHogwartsProfesors(input)).toEqual(output);
+  });
+});
+
+describe('filterPotterHouse', () => {
+  it('debería ser una función', () => {
+    expect(typeof filterPotterHouse).toBe('function');
+  });
+
+  it('es una función que ordena a los personajes por la casa a la que pertenece', () => {
+    const input = [
+      {
+        name: 'Ron Weasley',
+        house: 'Gryffindor',
+      },
+      {
+        name: 'Draco Malfoy',
+        house: 'Slytherin',
+      },
+      {
+        name: 'Hermione Granger',
+        gender: 'female',
+      },
+      {
+        name: 'Cedric Diggory',
+        house: 'Hufflepuff',
+      },
+      {
+        name: 'Cho Chang',
+        house: 'Ravenclaw',
+      },
+    ];
+    const outputGryf = [
+      {
+        name: 'Ron Weasley',
+        house: 'Gryffindor',
+      },
+    ];
+    const outputSlyt = [
+      {
+        name: 'Draco Malfoy',
+        house: 'Slytherin',
+      },
+    ];
+    const outputHuff = [
+      {
+        name: 'Cedric Diggory',
+        house: 'Hufflepuff',
+      },
+    ];
+    const outputRave = [
+      {
+        name: 'Cho Chang',
+        house: 'Ravenclaw',
+      },
+    ];
+    expect(filterPotterHouse(input, 'Gryffindor')).toEqual(outputGryf);
+    expect(filterPotterHouse(input, 'Slytherin')).toEqual(outputSlyt);
+    expect(filterPotterHouse(input, 'Hufflepuff')).toEqual(outputHuff);
+    expect(filterPotterHouse(input, '')).toEqual(outputRave);
   });
 });
