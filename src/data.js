@@ -32,3 +32,15 @@ export const searchCharacters = (array, text) => {
     .indexOf(text.toUpperCase()) > -1);
   return newArrOfSearch;
 };
+
+export const filterPotterHouse = (array, string) => {
+  const arrayHouses = [...array];
+  if (string === 'Gryffindor') {
+    return arrayHouses.filter((obj) => obj.house === 'Gryffindor');
+  } if (string === 'Slytherin') {
+    return arrayHouses.filter((obj) => obj.house === 'Slytherin');
+  } if (string === 'Hufflepuff') {
+    return arrayHouses.filter((obj) => obj.house === 'Hufflepuff');
+  }
+  return arrayHouses.filter((obj) => obj.house === 'Ravenclaw');
+};
