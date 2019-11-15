@@ -1,114 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Harry Potter World</title>
-    <link rel="icon" type="image/jpg" href="img\LOGO ALTERNO HPW 2.png">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter World</title>
+  <link rel="icon" type="image/jpg" href="img\LOGO ALTERNO HPW 2.png">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
-    <header>
-      <input type="checkbox" id="chec">
-      <label for="chec">
-        <img class="object hamburguer move-right" src="img\mdi_menu.png">
-      </label>
+<body>
 
-      <nav id="menu_general">
-        <img src="img\LOGO ALTERNO HPW.png" class="alternLogoMenu">
+  <header>
+    <input type="checkbox" id="chec">
+    <label for="chec">
+      <img class="object hamburguer move-right" src="img\mdi_menu.png">
+    </label>
 
-        <div class="container-4">
-          <input type="search" id="search" placeholder="Busca por nombre del personaje" />
-          <button class="icon"><i class="fa fa-search"></i></button>
-        </div>
+    <nav id="menu_general">
+      <img src="img\LOGO ALTERNO HPW.png" class="alternLogoMenu">
 
-        <ul id="principalMenuList">
-          <li class="principalMenuCategorie"><a href="#">Ocupacion <img src="img\plus-menu.png" class="iconMenu1"></a>
-            <ul>
-              <li><a href="#" id="subOption1">Estudiantes</a></li>
-              <li><a href="#" id="subOption2">Profesores</a></li>
-            </ul>
-          </li>
-          <li class="principalMenuCategorie"><a href="#">Varitas</a></li>
-          <li class="principalMenuCategorie"><a href="#">Casas<img src="img\plus-menu.png" class="iconMenu2"></a>
-            <ul>
-              <li><a href="#">Gryffindor</a></li>
-              <li><a href="#">Slytherin</a></li>
-              <li><a href="#">Hufflepuff</a></li>
-              <li><a href="#">Ravenclaw</a></li>
-            </ul>
-          </li>
-          <li class="principalMenuCategorie"><a href="#">Hechizos</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <div id="principalContainer">
-        <img src="img\LOGO HPW.png" class="HPLogo">
-        <div id="filterCategories">
-          <select id="filterSelection">
-            <option hidden selected> F I L T R O</option>
-            <optgroup label="- Ordenar">
-              <option value="A-Z"> A - Z </option>
-              <option value="Z-A"> Z - A </option>
-            </optgroup>
-            <optgroup label="- Género">
-              <option value="Femenino"> Femenino </option>
-              <option value="Masculino"> Masculino </option>
-            </optgroup>
-          </select>
-        </div>
-        <div id="insertPotterCharacter"></div>
+      <div class="container-4">
+        <input type="search" id="search" placeholder="Busca por nombre del personaje" />
+        <button class="icon"><i class="fa fa-search"></i></button>
       </div>
 
-      <div class="hide" id="potterStudents">
-        <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
-        <h1 class="titlesOcupation">Estudiantes</h1>
-        <div id="filterStudents">
-          <select id="secondFilter">
-            <option hidden selected> F I L T R O </option>
-            <optgroup label="Ordenar">
-              <option value="A-Z"> A - Z </option>
-              <option value="Z-A"> Z - A </option>
-            </optgroup>
-            <optgroup label="- Género">
-              <option value="Femenino"> Femenino </option>
-              <option value="Masculino"> Masculino </option>
-            </optgroup>
-          </select>
-        </div>
-        <div id="insertPotterStudents"></div>
-      </div>
+      <ul id="principalMenuList">
+        <li class="principalMenuCategorie"><a href="#">Ocupacion <img src="img\plus-menu.png" class="iconMenu1"></a>
+          <ul>
+            <li><a href="#" id="subOption1">Estudiantes</a></li>
+            <li><a href="#" id="subOption2">Profesores</a></li>
+          </ul>
+        </li>
+        <li class="principalMenuCategorie"><a href="#">Varitas</a></li>
+        <li class="principalMenuCategorie"><a href="#">Casas<img src="img\plus-menu.png" class="iconMenu2"></a>
+          <ul>
+            <li id="subOption3" data-value="Gryffindor"><a href="#">Gryffindor</a></li>
+            <li id="subOption4" data-value="Slytherin"><a href="#">Slytherin</a></li>
+            <li id="subOption5" data-value="Hufflepuff"><a href="#">Hufflepuff</a></li>
+            <li id="subOption6" data-value="Ravenclaw"><a href="#">Ravenclaw</a></li>
+          </ul>
+        </li>
+        <li class="principalMenuCategorie"><a href="#">Hechizos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="hide" id="potterProfesors">
-          <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
-          <h1 class="titlesOcupation">Profesores</h1>
-        <div id="filterProfesors">
-          <select id="thirdFilter">
-            <option hidden selected> F I L T R O </option>
-            <optgroup label="Ordenar">
-              <option value="A-Z"> A - Z </option>
-              <option value="Z-A"> Z - A </option>
-            </optgroup>
-            <optgroup label="- Género">
-              <option value="Femenino"> Femenino </option>
-              <option value="Masculino"> Masculino </option>
-            </optgroup>
-          </select>
-        </div>
-        <div id="insertPotterProfesors"></div>
+  <main>
+    <div id="principalContainer">
+      <img src="img\LOGO HPW.png" class="HPLogo">
+      <div id="filterCategories">
+        <select id="filterSelection">
+          <option hidden selected> F I L T R O</option>
+          <optgroup label="- Ordenar">
+            <option value="A-Z"> A - Z </option>
+            <option value="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="- Género">
+            <option value="Femenino"> Femenino </option>
+            <option value="Masculino"> Masculino </option>
+          </optgroup>
+        </select>
       </div>
+      <div id="insertPotterCharacter"></div>
+    </div>
 
-       <!--añadir "controls" para mejor experiencia de usuario-->
-      <audio src="audio/Harry Potter Theme Song.mp3" autoplay loop controls></audio>
-    </main>
-    <script type="module" src="main.js"></script>
-    <script type="module" src="data.js"></script>
-  </body>
+    <div class="hide" id="potterStudents">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Estudiantes</h1>
+      <div id="filterStudents">
+        <select id="secondFilter">
+          <option hidden selected> F I L T R O </option>
+          <optgroup label="- Ordenar">
+            <option value="A-Z"> A - Z </option>
+            <option value="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="- Género">
+            <option value="Femenino"> Femenino </option>
+            <option value="Masculino"> Masculino </option>
+          </optgroup>
+        </select>
+      </div>
+      <div id="insertPotterStudents"></div>
+    </div>
+
+    <div class="hide" id="potterProfesors">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Profesores</h1>
+      <div id="filterProfesors">
+        <select id="thirdFilter">
+          <option hidden selected> F I L T R O </option>
+          <optgroup label="- Ordenar">
+            <option value="A-Z"> A - Z </option>
+            <option value="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="- Género">
+            <option value="Femenino"> Femenino </option>
+            <option value="Masculino"> Masculino </option>
+          </optgroup>
+        </select>
+      </div>
+      <div id="insertPotterProfesors"></div>
+    </div>
+
+    <div class="hide" id="potterGryffindor">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Gryffindor</h1>
+      <div id="filterGryffindor">
+        <select id="fourthFilter">
+          <option hidden selected> F I L T R O </option>
+          <optgroup label="- Ordenar">
+            <option value="A-Z"> A - Z </option>
+            <option value="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="- Género">
+            <option value="Femenino"> Femenino </option>
+            <option value="Masculino"> Masculino </option>
+          </optgroup>
+          <!--           <optgroup label="- Ocupacion">
+            <option value="Estudiante"> Estudiante </option>
+            <option value="Profesor"> Profesor </option>
+          </optgroup> -->
+        </select>
+      </div>
+      <div id="insertPotterGryffindor"></div>
+    </div>
+
+    <div class="hide" id="potterSlytherin">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Slytherin</h1>
+      <div id="filterSlytherin">
+        <select id="fifthFilter">
+          <option hidden selected> F I L T R O </option>
+          <optgroup label="- Ordenar">
+            <option value="A-Z"> A - Z </option>
+            <option value="Z-A"> Z - A </option>
+          </optgroup>
+          <optgroup label="- Género">
+            <option value="Femenino"> Femenino </option>
+            <option value="Masculino"> Masculino </option>
+          </optgroup>
+          <!--           <optgroup label="- Ocupacion">
+          <option value="Estudiante"> Estudiante </option>
+          <option value="Profesor"> Profesor </option>
+        </optgroup> -->
+        </select>
+      </div>
+      <div id="insertPotterSlytherin"></div>
+    </div>
+
+    <div class="hide" id="potterHufflepuff">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Slytherin</h1>
+      <div id="insertPotterHufflepuff"></div>
+    </div>
+
+    <div class="hide" id="potterRavenclaw">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Ravenclaw</h1>
+      <div id="insertPotterRavenclaw"></div>
+    </div>  
+
+    <audio src="audio/Harry Potter Theme Song.mp3" autoplay loop></audio>
+  </main>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="data.js"></script>
+</body>
+
 </html>
