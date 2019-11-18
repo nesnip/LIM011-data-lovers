@@ -119,6 +119,7 @@ filteredStudentsMenu.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   potterSpells.classList.add('hide');
   wandsContainer.classList.add('hide');
+  text.value = '';
 
   const filterByStudent = filterHogwartsStudents(POTTER);
   document.querySelector('#insertPotterStudents').innerHTML = showPotterCharacters(filterByStudent);
@@ -140,6 +141,7 @@ filteredStaffMenu.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const filterByStaff = filterHogwartsStaff(POTTER);
   document.querySelector('#insertPotterStaff').innerHTML = showPotterCharacters(filterByStaff);
@@ -161,6 +163,7 @@ text.addEventListener('keyup', () => {
   potterRavenclaw.classList.add('hide');
   potterSpells.classList.add('hide');
   wandsContainer.classList.add('hide');
+
   const arrSearchCharacter = searchCharacters(POTTER, text.value);
   searchResults.innerHTML = showPotterCharacters(arrSearchCharacter);
 });
@@ -177,6 +180,7 @@ filterHouseGryffindor.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const filterByGryffindor = filterPotterHouse(POTTER, valuePotterGryffindor);
   document.querySelector('#insertPotterGryffindor').innerHTML = showPotterCharacters(filterByGryffindor);
@@ -198,6 +202,7 @@ filterHouseSlytherin.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const filterBySlytherin = filterPotterHouse(POTTER, valuePotterSlytherin);
   document.querySelector('#insertPotterSlytherin').innerHTML = showPotterCharacters(filterBySlytherin);
@@ -219,6 +224,7 @@ filterHouseHufflepuff.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const filterByHufflepuff = filterPotterHouse(POTTER, valuePotterHufflepuff);
   document.querySelector('#insertPotterHufflepuff').innerHTML = showPotterCharacters(filterByHufflepuff);
@@ -236,6 +242,7 @@ filterHouseRavenclaw.addEventListener('click', () => {
   potterRavenclaw.classList.remove('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const filterByRavenclaw = filterPotterHouse(POTTER, valuePotterRavenclaw);
   document.querySelector('#insertPotterRavenclaw').innerHTML = showPotterCharacters(filterByRavenclaw);
@@ -274,6 +281,7 @@ wandsMenu.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.remove('hide');
   potterSpells.classList.add('hide');
+  text.value = '';
 
   const arrWands = filterWands(POTTER);
   document.querySelector('#insertWands').innerHTML = characterWands(arrWands);
@@ -297,6 +305,7 @@ function showPotterSpells(file) {
 
 filterPotterSpells.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
   potterGryffindor.classList.add('hide');
@@ -305,6 +314,7 @@ filterPotterSpells.addEventListener('click', () => {
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
   potterSpells.classList.remove('hide');
+  text.value = '';
 
   const arrSpells = filterSpells(POTTER);
   document.querySelector('#insertPotterSpells').innerHTML = showPotterSpells(arrSpells);
