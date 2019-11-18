@@ -1,6 +1,7 @@
 // importamos la función `example`
 import {
   orderByNameAndGender,
+  searchCharacters,
   filterHogwartsStudents,
   filterHogwartsStaff,
   filterPotterHouse,
@@ -71,6 +72,29 @@ describe('orderByNameAndGender', () => {
     expect(orderByNameAndGender(input1, 'Z-A')).toEqual(outputDesc);
     expect(orderByNameAndGender(input2, 'Femenino')).toEqual(outputFem);
     expect(orderByNameAndGender(input2, '')).toEqual(outputMale);
+  });
+});
+
+describe('searchCharacters', () => {
+  it('debería ser una función', () => {
+    expect(typeof searchCharacters).toBe('function');
+  });
+
+  it('es una función que filtra personajes mediante un string ingresado', () => {
+    const input1 = [
+      { name: 'Luna Lovegood' },
+      { name: 'Remus Lupin' },
+      { name: 'Lucius Malfoy' },
+      { name: 'Draco Malfoy' },
+      { name: 'Ron Weasley' },
+    ];
+    const input2 = 'lu';
+    const output = [
+      { name: 'Luna Lovegood' },
+      { name: 'Remus Lupin' },
+      { name: 'Lucius Malfoy' },
+    ];
+    expect(searchCharacters(input1, input2)).toEqual(output);
   });
 });
 
