@@ -190,7 +190,7 @@ option {
 /* Estilos de los cards de personajes*/
 
 #insertPotterCharacter, #insertPotterStudents, #insertPotterProfesors, #insertPotterGryffindor, 
-#insertPotterSlytherin, #insertPotterHufflepuff, #insertPotterRavenclaw {
+#insertPotterSlytherin, #insertPotterHufflepuff, #insertPotterRavenclaw, #searchResults, #insertWands {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -240,7 +240,7 @@ option {
   color: white;
   transform: rotateY(180deg);
   background-color: rgba(119,136,153,0.95);
-  text-align: justify;
+  text-align: start;
 }
 
 h1 {
@@ -346,6 +346,46 @@ div > li {
 .container-4:hover button.icon:hover{
   background: white;
 }
+
+/* Estilos de cards de varitas */
+
+.wand-card {
+  background-color: rgba(119,136,153,0.95);
+  border-radius: 10px;
+  display: flex;
+  /* width: 400px;
+  height: 250px; */
+  width: 320px;
+  height: 190px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.wand-card-photo {
+  width: 30%;
+  height: 70%;
+}
+
+.wand-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  width: 46%;
+  height: 90%;
+}
+
+.wand-description li {
+  margin: 2% 0;
+  font-size: 110%;
+}
+
+.wand-description h1 {
+  margin: 2% 0;
+  font-size: 130%;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 /* @media (min-width: 576px) { ... } */

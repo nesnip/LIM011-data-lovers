@@ -36,7 +36,7 @@
             <li><a href="#" id="subOption2">Profesores</a></li>
           </ul>
         </li>
-        <li class="principalMenuCategorie"><a href="#">Varitas</a></li>
+        <li class="principalMenuCategorie"><a href="#" id="wandsMenu">Varitas</a></li>
         <li class="principalMenuCategorie"><a href="#">Casas<img src="img\plus-menu.png" class="iconMenu2"></a>
           <ul>
             <li id="subOption3" data-value="Gryffindor"><a href="#">Gryffindor</a></li>
@@ -67,6 +67,12 @@
         </select>
       </div>
       <div id="insertPotterCharacter"></div>
+    </div>
+
+    <div class="hide" id="searchContainer">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Resultados de búsqueda</h1>
+      <div id="searchResults"></div>
     </div>
 
     <div class="hide" id="potterStudents">
@@ -155,7 +161,7 @@
 
     <div class="hide" id="potterHufflepuff">
       <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
-      <h1 class="titlesOcupation">Slytherin</h1>
+      <h1 class="titlesOcupation">Hufflepuff</h1>
       <div id="insertPotterHufflepuff"></div>
     </div>
 
@@ -164,7 +170,12 @@
       <h1 class="titlesOcupation">Ravenclaw</h1>
       <div id="insertPotterRavenclaw"></div>
     </div>
-
+    
+    <div class="hide" id="wandsContainer">
+      <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
+      <h1 class="titlesOcupation">Varitas Mágicas</h1>
+      <div id="insertWands"></div>
+    
     <div class="hide" id="potterSpells">
       <div><img src="img\LOGO ALTERNO HPW.png" class="HPLogoAlterno"></div>
       <h1 class="titlesOcupation">Hechizos</h1>
@@ -172,7 +183,7 @@
       <div id="insertPotterSpells"></div>
     </div>
 
-    <audio src="audio/Harry Potter Theme Song.mp3" autoplay loop></audio>
+    <audio src="audio/Harry Potter Theme Song.mp3" loop></audio>
   </main>
   <script type="module" src="main.js"></script>
   <script type="module" src="data.js"></script>

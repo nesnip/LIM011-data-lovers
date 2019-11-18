@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 
+// Función que filtra personajes por orden a-z, z-a y filtra por género
 export const orderByNameAndGender = (array, string1) => {
   const arrayData = [...array];
   const newArray = arrayData.map((obj) => obj.name)
@@ -14,25 +15,32 @@ export const orderByNameAndGender = (array, string1) => {
   return arrayData.filter((obj) => (obj).gender === 'male');
 };
 
+// Función que filtra estudiantes
 export const filterHogwartsStudents = (array) => {
   const arrayByStudent = [...array];
   const newArrayByStudent = arrayByStudent.filter((obj) => (obj).hogwartsStudent === true);
   return newArrayByStudent;
 };
 
+// Función que filtra profesores
 export const filterHogwartsProfesors = (array) => {
   const arrayByProfesor = [...array];
   const newArrayByProfesor = arrayByProfesor.filter((obj) => (obj).hogwartsStaff === true);
   return newArrayByProfesor;
 };
 
-export const searchCharacters = (array, text) => {
+// Función que busca personajes
+export const searchCharacters = (array, string) => {
   const arrOfSearch = [...array];
-  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name.toUpperCase()
-    .indexOf(text.toUpperCase()) > -1);
+  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name
+    .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
+    /* obj.name
+    .toUpperCase()
+    .indexOf(string.toUpperCase()) > -1); */
   return newArrOfSearch;
 };
 
+// Función que filtra personajes por casa
 export const filterPotterHouse = (array, string) => {
   const arrayHouses = [...array];
   if (string === 'Gryffindor') {
@@ -43,4 +51,10 @@ export const filterPotterHouse = (array, string) => {
     return arrayHouses.filter((obj) => obj.house === 'Hufflepuff');
   }
   return arrayHouses.filter((obj) => obj.house === 'Ravenclaw');
+};
+
+// Función que filtre solo personajes con varitas
+export const filterWands = (array) => {
+  const arrayWands = [...array];
+  return arrayWands.filter((obj) => obj.wand.wood !== '' || obj.wand.core !== '' || obj.wand.length !== '');
 };

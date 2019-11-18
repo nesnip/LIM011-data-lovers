@@ -1,6 +1,10 @@
 // importamos la función `example`
 import {
-  orderByNameAndGender, filterHogwartsStudents, filterHogwartsProfesors, filterPotterHouse,
+  orderByNameAndGender,
+  filterHogwartsStudents,
+  filterHogwartsProfesors,
+  filterPotterHouse,
+  filterWands,
 } from '../src/data';
 
 describe('orderByNameAndGender', () => {
@@ -194,5 +198,42 @@ describe('filterPotterHouse', () => {
     expect(filterPotterHouse(input, 'Slytherin')).toEqual(outputSlyt);
     expect(filterPotterHouse(input, 'Hufflepuff')).toEqual(outputHuff);
     expect(filterPotterHouse(input, '')).toEqual(outputRave);
+  });
+});
+
+describe('filterWands', () => {
+  it('debería ser una función', () => {
+    expect(typeof filterWands).toBe('function');
+  });
+
+  it('es una función que filtra solo personajes con varita', () => {
+    const input = [
+      {
+        wand: {
+          wood: 'holly',
+          core: 'phoenix feather',
+          length: 11,
+        },
+      },
+      {
+        wand: {
+          wood: '',
+          core: '',
+          length: '',
+        },
+      },
+    ];
+
+    const output = [
+      {
+        wand: {
+          wood: 'holly',
+          core: 'phoenix feather',
+          length: 11,
+        },
+      },
+    ];
+
+    expect(filterWands(input)).toEqual(output);
   });
 });
