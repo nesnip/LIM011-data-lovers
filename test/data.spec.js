@@ -2,9 +2,10 @@
 import {
   orderByNameAndGender,
   filterHogwartsStudents,
-  filterHogwartsProfesors,
+  filterHogwartsStaff,
   filterPotterHouse,
   filterWands,
+  filterSpells,
 } from '../src/data';
 
 describe('orderByNameAndGender', () => {
@@ -107,9 +108,9 @@ describe('filterHogwartsStudents', () => {
   });
 });
 
-describe('filterHogwartsProfesors', () => {
+describe('filterHogwartsStaff', () => {
   it('deberia ser una funcion', () => {
-    expect(typeof filterHogwartsProfesors).toBe('function');
+    expect(typeof filterHogwartsStaff).toBe('function');
   });
 
   it('es una funcion que filtra staff', () => {
@@ -138,7 +139,7 @@ describe('filterHogwartsProfesors', () => {
         hogwartsStaff: true,
       },
     ];
-    expect(filterHogwartsProfesors(input)).toEqual(output);
+    expect(filterHogwartsStaff(input)).toEqual(output);
   });
 });
 
@@ -235,5 +236,41 @@ describe('filterWands', () => {
     ];
 
     expect(filterWands(input)).toEqual(output);
+  });
+});
+
+describe('filterSpells', () => {
+  it('debería ser una función', () => {
+    expect(typeof filterSpells).toBe('function');
+  });
+
+  it('es una función que filtra solo personajes con patronus', () => {
+    const input = [
+      {
+        name: 'Harry Potter',
+        patronus: 'stag',
+      },
+      {
+        name: 'Hermione Granger',
+        patronus: 'otter',
+      },
+      {
+        name: 'Draco Malfoy',
+        patronus: '',
+      },
+    ];
+
+    const output = [
+      {
+        name: 'Harry Potter',
+        patronus: 'stag',
+      },
+      {
+        name: 'Hermione Granger',
+        patronus: 'otter',
+      },
+    ];
+
+    expect(filterSpells(input)).toEqual(output);
   });
 });
