@@ -9,6 +9,7 @@ import {
   searchCharacters,
   filterPotterHouse,
   filterWands,
+  filterSpells,
 } from './data.js';
 
 // Declarando id's donde se pintan los personajes
@@ -41,7 +42,7 @@ const potterSlytherin = document.querySelector('#potterSlytherin');
 const potterHufflepuff = document.querySelector('#potterHufflepuff');
 const potterRavenclaw = document.querySelector('#potterRavenclaw');
 const wandsContainer = document.querySelector('#wandsContainer');
-const insertPotterSpells = document.querySelector('#potterSpells');
+const potterSpells = document.querySelector('#potterSpells');
 
 // Declarando id's de las opciones de los filtros
 
@@ -65,7 +66,7 @@ principalLogo.addEventListener('click', () => {
   potterSlytherin.classList.add('hide');
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
+  potterSpells.classList.add('hide');
 });
 
 // Fumción que crea los flip cards de personajes
@@ -118,7 +119,7 @@ filteredStudentsMenu.addEventListener('click', () => {
   potterSlytherin.classList.add('hide');
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
+  potterSpells.classList.add('hide');
   wandsContainer.classList.add('hide');
 
   const filterByStudent = filterHogwartsStudents(POTTER);
@@ -140,7 +141,7 @@ filteredProfesorsMenu.addEventListener('click', () => {
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
+  potterSpells.classList.add('hide');
 
   const filterByStaff = filterHogwartsProfesors(POTTER);
   document.querySelector('#insertPotterProfesors').innerHTML = showPotterCharacters(filterByStaff);
@@ -160,7 +161,7 @@ text.addEventListener('keyup', () => {
   potterSlytherin.classList.add('hide');
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
+  potterSpells.classList.add('hide');
   wandsContainer.classList.add('hide');
   const arrSearchCharacter = searchCharacters(POTTER, text.value);
   searchResults.innerHTML = showPotterCharacters(arrSearchCharacter);
@@ -177,8 +178,8 @@ filterHouseGryffindor.addEventListener('click', () => {
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
-  
+  potterSpells.classList.add('hide');
+
   const filterByGryffindor = filterPotterHouse(POTTER, valuePotterGryffindor);
   document.querySelector('#insertPotterGryffindor').innerHTML = showPotterCharacters(filterByGryffindor);
   fourthFilter.addEventListener('change', () => {
@@ -198,7 +199,7 @@ filterHouseSlytherin.addEventListener('click', () => {
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
+  potterSpells.classList.add('hide');
 
   const filterBySlytherin = filterPotterHouse(POTTER, valuePotterSlytherin);
   document.querySelector('#insertPotterSlytherin').innerHTML = showPotterCharacters(filterBySlytherin);
@@ -219,8 +220,8 @@ filterHouseHufflepuff.addEventListener('click', () => {
   potterHufflepuff.classList.remove('hide');
   potterRavenclaw.classList.add('hide');
   wandsContainer.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
-  
+  potterSpells.classList.add('hide');
+
   const filterByHufflepuff = filterPotterHouse(POTTER, valuePotterHufflepuff);
   document.querySelector('#insertPotterHufflepuff').innerHTML = showPotterCharacters(filterByHufflepuff);
 });
@@ -236,8 +237,8 @@ filterHouseRavenclaw.addEventListener('click', () => {
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.remove('hide');
   wandsContainer.classList.add('hide');
-  insertPotterSpells.classList.add('hide');
-  
+  potterSpells.classList.add('hide');
+
   const filterByRavenclaw = filterPotterHouse(POTTER, valuePotterRavenclaw);
   document.querySelector('#insertPotterRavenclaw').innerHTML = showPotterCharacters(filterByRavenclaw);
 });
@@ -267,6 +268,18 @@ const characterWands = (data) => {
 wandsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
   searchContainer.classList.add('hide');
+  potterStudents.classList.add('hide');
+  potterProfesors.classList.add('hide');
+  potterGryffindor.classList.add('hide');
+  potterSlytherin.classList.add('hide');
+  potterHufflepuff.classList.add('hide');
+  potterRavenclaw.classList.add('hide');
+  wandsContainer.classList.remove('hide');
+  potterSpells.classList.add('hide');
+
+  const arrWands = filterWands(POTTER);
+  document.querySelector('#insertWands').innerHTML = characterWands(arrWands);
+});
 
 function showPotterSpells(file) {
   let templateSpellsPotter = '';
@@ -292,8 +305,5 @@ filterPotterSpells.addEventListener('click', () => {
   potterSlytherin.classList.add('hide');
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
-  wandsContainer.classList.remove('hide');
-  const arrWands = filterWands(POTTER);
-  document.querySelector('#insertWands').innerHTML = characterWands(arrWands);
-  insertPotterSpells.classList.remove('hide');
+  potterSpells.classList.remove('hide');
 });
