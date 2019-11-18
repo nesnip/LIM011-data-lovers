@@ -173,7 +173,7 @@ option {
   font-size: 11px;
 }
 
-#filterStudents, #filterProfesors, #filterGryffindor, #filterSlytherin {
+#filterStudents, #filterStaff, #filterGryffindor, #filterSlytherin {
   text-align: end;
 }
 
@@ -189,7 +189,7 @@ option {
 
 /* Estilos de los cards de personajes*/
 
-#insertPotterCharacter, #insertPotterStudents, #insertPotterProfesors, #insertPotterGryffindor,
+#insertPotterCharacter, #insertPotterStudents, #insertPotterStaff, #insertPotterGryffindor,
 #insertPotterSlytherin, #insertPotterHufflepuff, #insertPotterRavenclaw, #searchResults, #insertWands,
 #insertPotterSpells {
   display: flex;

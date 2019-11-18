@@ -23,10 +23,10 @@ export const filterHogwartsStudents = (array) => {
 };
 
 // Función que filtra profesores
-export const filterHogwartsProfesors = (array) => {
-  const arrayByProfesor = [...array];
-  const newArrayByProfesor = arrayByProfesor.filter((obj) => (obj).hogwartsStaff === true);
-  return newArrayByProfesor;
+export const filterHogwartsStaff = (array) => {
+  const arrayByStaff = [...array];
+  const newArrayByStaff = arrayByStaff.filter((obj) => (obj).hogwartsStaff === true);
+  return newArrayByStaff;
 };
 
 // Función que busca personajes
