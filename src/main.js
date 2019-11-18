@@ -29,7 +29,7 @@ const valuePotterHufflepuff = document.getElementById('subOption5').getAttribute
 const filterHouseRavenclaw = document.querySelector('#subOption6');
 const valuePotterRavenclaw = document.getElementById('subOption6').getAttribute('data-value');
 const wandsMenu = document.querySelector('#wandsMenu');
-const filterPotterSpells = document.querySelector('#subOption7');
+const filterPotterSpells = document.querySelector('#spellsMenu');
 
 // Declarando los id's de los contenedores (pantallas)
 
@@ -285,17 +285,17 @@ function showPotterSpells(file) {
   let templateSpellsPotter = '';
   file.map((obj) => {
     templateSpellsPotter += `
-          <h2>${obj.name}</h2>
-          <img src = '${obj.image}' alt = "Image" class="photoCharacter2"/>
+      <div class="spells-card">
+        <img src = '${obj.image}' alt = "Image" class="spells-card-photo"/>
+        <div class="spells-description">
+          <h1>${obj.name}</h1>
+          <li>Patronus: ${obj.patronus}</li>
         </div>
-          <p>Patronus: ${obj.patronus}</p>
-        </div>`;
+      </div>`;
     return templateSpellsPotter;
   });
   return templateSpellsPotter;
 }
-
-document.querySelector('#insertPotterSpells').innerHTML = showPotterSpells(POTTER);
 
 filterPotterSpells.addEventListener('click', () => {
   principalContainer.classList.add('hide');
@@ -305,5 +305,9 @@ filterPotterSpells.addEventListener('click', () => {
   potterSlytherin.classList.add('hide');
   potterHufflepuff.classList.add('hide');
   potterRavenclaw.classList.add('hide');
+  wandsContainer.classList.add('hide');
   potterSpells.classList.remove('hide');
+
+  const arrSpells = filterSpells(POTTER);
+  document.querySelector('#insertPotterSpells').innerHTML = showPotterSpells(arrSpells);
 });
