@@ -28,12 +28,9 @@ body {
 }
 
 .HPLogoAlterno {
-  width: 38%;
+  width: 40%;
   display: block;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin: 1.2em auto;
   cursor: pointer;
 }
 
@@ -41,8 +38,9 @@ body {
 
 .titlesOcupation {
   font-family: 'Marcellus SC';
-  font-size: 40px;
+  font-size: 2em;
   color: #ffffff;
+  margin: 0.25em;
 }
 
 /* Estilos del menu principal*/
@@ -101,11 +99,14 @@ a {
 /* Estilos de las subcategorías del menú principal */
 
 #menu_general li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  align-content: center;
   text-decoration: none;
   font-size: 20px;
   line-height: 20px;
   color: #ffffff;
+  justify-content: space-between;
 }
 
 #menu_general li ul {
@@ -135,16 +136,9 @@ a {
 
 /* Estilos del icono del menu*/
 
-.iconMenu1 {
-  width: 5.5%;
-  margin-left: 100px;
-  align-items: center;
-}
-
-.iconMenu2 {
-  width: 5.5%;
-  margin-left: 148px;
-  align-items: center;
+.iconMenu1, .iconMenu2 {
+  width: 7%;
+  height: auto;
 }
 
 /*Estilo del logo alterno del Menu */
@@ -154,6 +148,7 @@ a {
   margin-left: 220px;
   margin-top: 10px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 /*Estilos del filtro */
@@ -186,7 +181,7 @@ option {
   border-color: #300e4a;
   color: #ffffff;
   padding: 5px;
-  margin: 20px 20px;
+  margin: 2%;
 }
 
 /* Estilos de los cards de personajes*/
@@ -416,6 +411,10 @@ div > li {
     transform: translateX(100%);
   }
 
+  .HPLogoAlterno {
+    width: 20%;
+  }
+
   .alternLogoMenu {
     margin-left: 190px;
   }
@@ -437,10 +436,6 @@ div > li {
     width: 30%;
   }
 
-  .HPLogoAlterno {
-    width: 27%;
-  }
-
   .alternLogoMenu {
     margin-left: 200px;
   }
@@ -458,16 +453,6 @@ div > li {
 
   input[type='checkbox']:checked ~ nav {
     transform: translateX(0%);
-  }
-
-  /* Estilos del icono del menu*/
-
-  .iconMenu1 {
-    margin-left: 35%;
-  }
-
-  .iconMenu2 {
-    margin-left: 57%;
   }
 
 }
@@ -488,7 +473,7 @@ div > li {
   }
 
   .HPLogoAlterno {
-    width: 20%;
+    width: 17%;
   }
 
   .alternLogoMenu {
@@ -506,21 +491,4 @@ div > li {
     z-index: 1;
   }
 
-  input[type='checkbox']:checked ~ nav {
-    transform: translateX(0%);
-  }
-
-  /* Estilos del icono del menu*/
-
-  .iconMenu1 {
-    width: 5.5%;
-    margin-left: 30%;
-    align-items: center;
-  }
-
-  .iconMenu2 {
-    width: 5.5%;
-    margin-left: 60%;
-    align-items: center;
-  }
 }

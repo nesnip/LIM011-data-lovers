@@ -53,19 +53,18 @@ const fourthFilter = document.querySelector('#fourthFilter');
 const fifthFilter = document.querySelector('#fifthFilter');
 
 // Logo alterno
-const principalLogo = document.querySelector('.HPLogoAlterno');
+const subLogoContainer = document.querySelector('#subLogoContainer');
+const HPLogoAlterno = document.querySelector('.HPLogoAlterno');
+const alternLogoMenu = document.querySelector('.alternLogoMenu');
 
-// Función para volver al inicio haciendo click en logo alterno
-principalLogo.addEventListener('click', () => {
-  principalContainer.classList.remove('hide');
-  searchContainer.classList.add('hide');
-  potterStaff.classList.add('hide');
-  potterStudents.classList.add('hide');
-  potterGryffindor.classList.add('hide');
-  potterSlytherin.classList.add('hide');
-  potterHufflepuff.classList.add('hide');
-  potterRavenclaw.classList.add('hide');
-  potterSpells.classList.add('hide');
+// Función para volver al inicio haciendo click en logo alterno del Menú
+alternLogoMenu.addEventListener('click', () => {
+  window.location.reload();
+});
+
+// Función para volver al inicio haciendo click en logo alterno de las pantallas
+HPLogoAlterno.addEventListener('click', () => {
+  window.location.reload(true);
 });
 
 // Fumción que crea los flip cards de personajes
@@ -110,6 +109,7 @@ filterSelection.addEventListener('change', () => {
 // Función que muestra los estudiantes
 filteredStudentsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStaff.classList.add('hide');
   potterStudents.classList.remove('hide');
@@ -132,6 +132,7 @@ filteredStudentsMenu.addEventListener('click', () => {
 // Función que muestra a los Staff
 filteredStaffMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.remove('hide');
@@ -154,6 +155,7 @@ filteredStaffMenu.addEventListener('click', () => {
 // Función que muestra los resultados de búsqueda en tiempo real
 text.addEventListener('keyup', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.remove('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -171,6 +173,7 @@ text.addEventListener('keyup', () => {
 // Función que muestra personajes de Gryffindor
 filterHouseGryffindor.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -193,6 +196,7 @@ filterHouseGryffindor.addEventListener('click', () => {
 // Función que muestra personajes de Slytherin
 filterHouseSlytherin.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -215,6 +219,7 @@ filterHouseSlytherin.addEventListener('click', () => {
 // Función que muestra personajes de Hufflepuff
 filterHouseHufflepuff.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -233,6 +238,7 @@ filterHouseHufflepuff.addEventListener('click', () => {
 // Función que muestra personajes de Ravenclaw
 filterHouseRavenclaw.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -272,6 +278,7 @@ const characterWands = (data) => {
 // Función que muestra los cards de varitas
 wandsMenu.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
@@ -305,6 +312,7 @@ function showPotterSpells(file) {
 
 filterPotterSpells.addEventListener('click', () => {
   principalContainer.classList.add('hide');
+  subLogoContainer.classList.remove('hide');
   searchContainer.classList.add('hide');
   potterStudents.classList.add('hide');
   potterStaff.classList.add('hide');
