@@ -41,9 +41,16 @@ body {
 
 .titlesOcupation {
   font-family: 'Marcellus SC';
-  font-size: 2em;
+  font-size: 2.4em;
   color: #ffffff;
   margin: 0.25em;
+}
+
+/* Estilos del circulo de Patronus*/
+
+.circleSpells {
+  width: 12px;
+  margin-right: 6px;
 }
 
 /* Estilos del menu principal*/
@@ -383,12 +390,24 @@ div > li {
   height: 90%;
 }
 
-.wand-description li, .spells-description li {
+.wand-description li {
   margin: 2% 0;
   font-size: 110%;
 }
 
-.wand-description h1, .spells-description h1 {
+.spells-description li {
+  margin: 4% 20%;
+  font-size: 100%;
+  text-align: center;
+}
+
+.spells-description h1 {
+  margin: 2% 0;
+  font-size: 125%;
+  text-align: center;
+}
+
+.wand-description h1 {
   margin: 2% 0;
   font-size: 130%;
 }
