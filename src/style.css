@@ -7,8 +7,10 @@
 
 body {
   background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-  background-size: 100%;
+  background-size: 317%;
   background-attachment: fixed;
+  background: no-repeat, cover;
+  background-position: center, center;
 }
 
 /*Esto es para aparecer y desaparecer pantallas*/
@@ -397,7 +399,7 @@ div > li {
 
 .spells-description li {
   margin: 4% 20%;
-  font-size: 100%;
+  font-size: 110%;
   text-align: center;
 }
 
@@ -413,11 +415,49 @@ div > li {
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-/* @media (min-width: 576px) { ... } */
+/* Small devices (landscape phones, 376px and up) */
+@media (min-width: 375px) { 
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 390%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+} 
+
+@media (min-width: 568px) { 
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 110%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+} 
+
+@media (min-width: 640px) { 
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 110%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+} 
+
+@media (min-width: 734px) { 
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 110%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+} 
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   nav {
     background-color: rgba(18, 18, 48, 0.91);
     width: 40%;
@@ -444,12 +484,25 @@ div > li {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 230%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+}  
+
+/* Large devices (tablets, desktops, 992px and up) */
 @media (min-width: 992px) {
 
   body {
     display: flex;
     flex-direction: row;
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 317%;
+    background-attachment: fixed;
   }
 
   main {
@@ -481,11 +534,24 @@ div > li {
 
 }
 
+@media (min-width: 1024px) { 
+  body {
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 123%;
+    background-attachment: fixed;
+    background: no-repeat, cover;
+    background-position: center, center;
+  }
+} 
+
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
     display: flex;
     flex-direction: row;
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
   }
 
   main {
