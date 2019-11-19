@@ -66,6 +66,8 @@ nav {
   position: fixed;
   top: 0;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 label > img {
@@ -104,7 +106,6 @@ a {
   list-style: none;
   top: 140px;
   width: 100%;
-  position: absolute;
   font-size: 25px;
 }
 
@@ -156,11 +157,10 @@ a {
 /*Estilo del logo alterno del Menu */
 
 .alternLogoMenu {
-  width: 37%;
-  margin-left: 220px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  width: 25%;
+  margin: 5%;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 /*Estilos del filtro */
@@ -290,18 +290,21 @@ div > li {
 /*Esto es para el buscador del menu principal*/
 
 .container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
+  /* overflow: hidden; */
+  width: 100%;
+  height: 6%;
+  /* vertical-align: middle; */
   white-space: nowrap;
   margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .container-4 input#search{
-  width: 210px;
-  height: 40px;
+  width: 80%;
+  height: 100%;
   margin-top: 0px;
-  margin-left: 35px;
+  /* margin-left: 35px; */
   background: #2b303b;
   border: none;
   font-size: 9pt;
@@ -478,10 +481,6 @@ div > li {
     margin-top: 20px;
     margin-bottom: 25px;
   }
-
-  .alternLogoMenu {
-    margin-left: 190px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -511,10 +510,6 @@ div > li {
 
   header {
     width: 30%;
-  }
-
-  .alternLogoMenu {
-    margin-left: 200px;
   }
 
   nav {
@@ -566,10 +561,6 @@ div > li {
     width: 9.5%;
     margin-bottom: 37px;
     margin-top: 20px;
-  }
-
-  .alternLogoMenu {
-    margin-left: 170px;
   }
 
   nav {
