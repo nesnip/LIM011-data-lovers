@@ -254,6 +254,12 @@ h2 {
   margin: 20px 65px;
 }
 
+h3 {
+  font-size: 25px;
+  margin-left: 30px;
+  color: #ffffff;
+}
+
 p {
   font-size: 1.000em;
   margin: 9px 20px;

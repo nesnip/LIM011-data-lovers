@@ -22,7 +22,7 @@ export const filterHogwartsStudents = (array) => {
   return newArrayByStudent;
 };
 
-// Función que filtra profesores
+// Función que filtra staff
 export const filterHogwartsStaff = (array) => {
   const arrayByStaff = [...array];
   const newArrayByStaff = arrayByStaff.filter((obj) => (obj).hogwartsStaff === true);
