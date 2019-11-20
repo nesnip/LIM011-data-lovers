@@ -437,7 +437,7 @@ div > li {
 
 
 /* Small devices (landscape phones, 376px and up) */
-@media (min-width: 375px) { 
+@media (min-width: 375px) {
   body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 390%;
@@ -445,9 +445,9 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
-} 
+}
 
-@media (min-width: 568px) { 
+@media (min-width: 568px) {
   body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 110%;
@@ -468,9 +468,9 @@ div > li {
     width: 3%;
     height: auto;
   }
-} 
+}
 
-@media (min-width: 640px) { 
+@media (min-width: 640px) {
   body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 110%;
@@ -478,9 +478,9 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
-} 
+}
 
-@media (min-width: 734px) { 
+@media (min-width: 734px) {
   body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 110%;
@@ -488,7 +488,7 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
-} 
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 760px) {
@@ -519,7 +519,7 @@ div > li {
   .container-4 {
     margin: 5% 0;
   }
-  
+
   /* Estilos del icono del menu*/
 
   .iconMenu1, .iconMenu2 {
@@ -542,7 +542,7 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
-}  
+}
 
 /* Large devices (tablets, desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -572,6 +572,7 @@ div > li {
     position: fixed;
     top: 0;
     z-index: 1;
+    overflow: hidden;
   }
 
   input[type='checkbox']:checked ~ nav {
@@ -582,7 +583,7 @@ div > li {
 
   .container-4 button.icon {
     width: 17%;
-    margin-left: -17%;  
+    margin-left: -17%;
   }
 
   .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
@@ -593,7 +594,7 @@ div > li {
 
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   body {
     background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
     background-size: 123%;
@@ -601,7 +602,7 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
-} 
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
