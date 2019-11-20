@@ -609,8 +609,9 @@ div > li {
   body {
     display: flex;
     flex-direction: row;
-    background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg");
-    background-size: 110%;
+    /* background-image: url("http://getwallpapers.com/wallpaper/full/0/7/d/263156.jpg"); */
+    /* background-clip: url("audio/Harry_Potter_Diagon_Alley_hd.mp4"); */
+    background-size: 100%;
     background-attachment: fixed;
   }
 
@@ -639,4 +640,11 @@ div > li {
     z-index: 1;
   }
 
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    /* min-height: 100%; */
+  }
 }
