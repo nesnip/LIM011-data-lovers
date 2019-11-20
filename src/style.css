@@ -68,6 +68,7 @@ nav {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 label > img {
@@ -90,7 +91,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   display: block;
-  padding: 20px 40px;
+  padding: 20px 40px 10px;
 }
 
 .principalMenuCategorie li:hover a, .principalMenuCategorie li a:focus {
@@ -109,6 +110,10 @@ a {
   font-size: 25px;
 }
 
+.principalMenuCategorie li a {
+  padding: 20px 40px 20px 80px;
+}
+
 /* Estilos de las subcategorías del menú principal */
 
 #menu_general li a {
@@ -120,6 +125,7 @@ a {
   line-height: 20px;
   color: #ffffff;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #menu_general li ul {
@@ -147,10 +153,20 @@ a {
   color: #300E4A;
 } */
 
+/* Estilos de subrayado de opciones de menú*/
+
+hr {
+  width: 100%;
+  /* color: rgba(129, 129, 142, 0.78); */
+  color: #81818E;
+  margin: 10px 0px 0px;
+  filter: blur(5px);
+}
+
 /* Estilos del icono del menu*/
 
 .iconMenu1, .iconMenu2 {
-  width: 7%;
+  width: 5%;
   height: auto;
 }
 
@@ -158,7 +174,7 @@ a {
 
 .alternLogoMenu {
   width: 25%;
-  margin: 5%;
+  margin: 5% 5% 3%;
   cursor: pointer;
   align-self: flex-end;
 }
@@ -291,24 +307,23 @@ div > li {
 
 .container-4{
   /* overflow: hidden; */
-  width: 100%;
-  height: 6%;
+  /* width: 100%;
+  height: 5.5%; */
   /* vertical-align: middle; */
-  white-space: nowrap;
-  margin: 20px 0px;
+  /* white-space: nowrap; */
+  margin: 2.5% 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .container-4 input#search{
   width: 80%;
   height: 100%;
   margin-top: 0px;
-  /* margin-left: 35px; */
+  padding: 1em;
   background: #2b303b;
   border: none;
-  font-size: 9pt;
-  float: left;
+  font-size: 0.8em;
   color: #fff;
   padding-left: 15px;
   -webkit-border-radius: 5px;
@@ -342,12 +357,15 @@ div > li {
 
   border: none;
   background: #232833;
-  height: 40px;
-  width: 50px;
+  width: 13%;
+  height: 100%;
+  /* height: 40px;
+  /* width: 50px; */
   color: #4f5b66;
   opacity: 0;
   font-size: 9pt;
   margin-top: 0px;
+  margin-left: -13%;
 
   -webkit-transition: all .55s ease;
   -moz-transition: all .55s ease;
@@ -359,7 +377,7 @@ div > li {
 .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
   outline: none;
   opacity: 1;
-  margin-left: -50px;
+  margin-left: -13%;
 }
 
 .container-4:hover button.icon:hover{
@@ -437,6 +455,19 @@ div > li {
     background: no-repeat, cover;
     background-position: center, center;
   }
+
+  /* Logo alterno del menú más pequeño*/
+  .alternLogoMenu {
+    width: 15%;
+    margin: 4% 5% 3%;
+  }
+
+  /* Estilos del icono del menu*/
+
+  .iconMenu1, .iconMenu2 {
+    width: 3%;
+    height: auto;
+  }
 } 
 
 @media (min-width: 640px) { 
@@ -463,9 +494,9 @@ div > li {
 @media (min-width: 760px) {
   nav {
     background-color: rgba(18, 18, 48, 0.91);
-    width: 40%;
+    width: 50%;
     height: 100%;
-    left: -40%;
+    left: -50%;
     transition: all 0.5s;
     position: fixed;
     top: 0;
@@ -474,6 +505,26 @@ div > li {
 
   input[type='checkbox']:checked ~ nav {
     transform: translateX(100%);
+  }
+
+  /* Logo alterno del menú más pequeño*/
+
+  .alternLogoMenu {
+    width: 25%;
+    margin: 5% 7% 3%;
+  }
+
+  /*Esto es para el buscador del menu principal*/
+
+  .container-4 {
+    margin: 5% 0;
+  }
+  
+  /* Estilos del icono del menu*/
+
+  .iconMenu1, .iconMenu2 {
+    width: 7%;
+    height: auto;
   }
 
   .HPLogoAlterno {
@@ -525,6 +576,19 @@ div > li {
 
   input[type='checkbox']:checked ~ nav {
     transform: translateX(0%);
+  }
+
+  /*Esto es para el ícono buscador del menu principal*/
+
+  .container-4 button.icon {
+    width: 17%;
+    margin-left: -17%;  
+  }
+
+  .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+    outline: none;
+    opacity: 1;
+    margin-left: -17%;
   }
 
 }
