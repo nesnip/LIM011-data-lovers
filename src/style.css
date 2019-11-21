@@ -27,7 +27,6 @@ body {
     display: block;
     margin: auto;
     padding: 10px;
-    cursor: pointer;
 }
 
 .HPLogoAlterno {
@@ -645,6 +644,7 @@ div > li {
     right: 0;
     bottom: 0;
     max-width: 100%;
+    z-index: -1;
     /* min-height: 100%; */
   }
 }
