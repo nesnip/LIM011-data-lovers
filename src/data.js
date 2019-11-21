@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
 
 // Función que filtra personajes por orden a-z, z-a y filtra por género
@@ -34,9 +35,6 @@ export const searchCharacters = (array, string) => {
   const arrOfSearch = [...array];
   const newArrOfSearch = arrOfSearch.filter((obj) => obj.name
     .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
-    /* obj.name
-    .toUpperCase()
-    .indexOf(string.toUpperCase()) > -1); */
   return newArrOfSearch;
 };
 
