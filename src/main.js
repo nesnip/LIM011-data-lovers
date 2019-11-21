@@ -167,7 +167,11 @@ text.addEventListener('keyup', () => {
   wandsContainer.classList.add('hide');
 
   const arrSearchCharacter = searchCharacters(POTTER, text.value);
-  searchResults.innerHTML = showPotterCharacters(arrSearchCharacter);
+  if (arrSearchCharacter.length > 0) {
+    searchResults.innerHTML = showPotterCharacters(arrSearchCharacter);
+  } else {
+    searchResults.innerHTML = 'No se encontraron resultados';
+  }
 });
 
 // Función que muestra personajes de Gryffindor

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
 
 // Función que filtra personajes por orden a-z, z-a y filtra por género
@@ -32,27 +33,9 @@ export const filterHogwartsStaff = (array) => {
 // Función que busca personajes
 export const searchCharacters = (array, string) => {
   const arrOfSearch = [...array];
-  let newArrOfSearch = arrOfSearch.filter((obj) => {
-    if (string.length > 0
-      && (obj.name.indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1)) {
-      return true;
-    }
-    return false;
-  });
-
-  if (newArrOfSearch.length > 0) {
-    console.log(newArrOfSearch);
-    return newArrOfSearch;
-  }
-  newArrOfSearch = 'No se encontraron resultados';
-  console.log(newArrOfSearch);
+  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name
+    .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
   return newArrOfSearch;
-
-  /*   obj.name
-  .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1 */
-  /* obj.name
-    .toUpperCase()
-    .indexOf(string.toUpperCase()) > -1); */
 };
 
 // Función que filtra personajes por casa

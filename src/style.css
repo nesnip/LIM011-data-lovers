@@ -220,6 +220,7 @@ option {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  color: #ffffff;
 }
 
 .photoCharacter {
@@ -637,14 +638,5 @@ div > li {
     position: fixed;
     top: 0;
     z-index: 1;
-  }
-
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    z-index: -1;
-    /* min-height: 100%; */
   }
 }
