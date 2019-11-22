@@ -14,7 +14,7 @@ describe('orderByNameAndGender', () => {
     expect(typeof orderByNameAndGender).toBe('function');
   });
 
-  it('es una función que ordena a los personajes por nombre o por genero', () => {
+  it('es una función que ordena a los personajes por nombre o por género', () => {
     const input1 = [
       { name: 'Ron Weasley' },
       { name: 'Draco Malfoy' },
@@ -31,42 +31,14 @@ describe('orderByNameAndGender', () => {
       { name: 'Draco Malfoy' },
     ];
     const input2 = [
-      {
-        name: 'Ron Weasley',
-        gender: 'male',
-      },
-      {
-        name: 'Draco Malfoy',
-        gender: 'male',
-      },
-      {
-        name: 'Hermione Granger',
-        gender: 'female',
-      },
-      {
-        name: 'Minerva McGonagall',
-        gender: 'female',
-      },
+      { gender: 'male' },
+      { gender: 'female' },
     ];
     const outputFem = [
-      {
-        name: 'Hermione Granger',
-        gender: 'female',
-      },
-      {
-        name: 'Minerva McGonagall',
-        gender: 'female',
-      },
+      { gender: 'female' },
     ];
     const outputMale = [
-      {
-        name: 'Ron Weasley',
-        gender: 'male',
-      },
-      {
-        name: 'Draco Malfoy',
-        gender: 'male',
-      },
+      { gender: 'male' },
     ];
     expect(orderByNameAndGender(input1, 'A-Z')).toEqual(outputAsc);
     expect(orderByNameAndGender(input1, 'Z-A')).toEqual(outputDesc);
@@ -105,28 +77,11 @@ describe('filterHogwartsStudents', () => {
 
   it('es una funcion que filtra estudiantes', () => {
     const input = [
-      {
-        name: 'Ron Weasley',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Draco Malfoy',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Minerva McGonagall',
-        hogwartsStudent: false,
-      },
+      { hogwartsStudent: true },
+      { hogwartsStudent: false },
     ];
     const output = [
-      {
-        name: 'Ron Weasley',
-        hogwartsStudent: true,
-      },
-      {
-        name: 'Draco Malfoy',
-        hogwartsStudent: true,
-      },
+      { hogwartsStudent: true },
     ];
     expect(filterHogwartsStudents(input)).toEqual(output);
   });
@@ -139,29 +94,11 @@ describe('filterHogwartsStaff', () => {
 
   it('es una funcion que filtra staff', () => {
     const input = [
-      {
-        name: 'Ron Weasley',
-        hogwartsStudent: true,
-        hogwartsStaff: false,
-      },
-      {
-        name: 'Minerva McGonagall',
-        hogwartsStaff: true,
-      },
-      {
-        name: 'Severus Snape',
-        hogwartsStaff: true,
-      },
+      { hogwartsStaff: false },
+      { hogwartsStaff: true },
     ];
     const output = [
-      {
-        name: 'Minerva McGonagall',
-        hogwartsStaff: true,
-      },
-      {
-        name: 'Severus Snape',
-        hogwartsStaff: true,
-      },
+      { hogwartsStaff: true },
     ];
     expect(filterHogwartsStaff(input)).toEqual(output);
   });
@@ -174,50 +111,22 @@ describe('filterPotterHouse', () => {
 
   it('es una función que ordena a los personajes por la casa a la que pertenece', () => {
     const input = [
-      {
-        name: 'Ron Weasley',
-        house: 'Gryffindor',
-      },
-      {
-        name: 'Draco Malfoy',
-        house: 'Slytherin',
-      },
-      {
-        name: 'Hermione Granger',
-        gender: 'female',
-      },
-      {
-        name: 'Cedric Diggory',
-        house: 'Hufflepuff',
-      },
-      {
-        name: 'Cho Chang',
-        house: 'Ravenclaw',
-      },
+      { house: 'Gryffindor' },
+      { house: 'Slytherin' },
+      { house: 'Hufflepuff' },
+      { house: 'Ravenclaw' },
     ];
     const outputGryf = [
-      {
-        name: 'Ron Weasley',
-        house: 'Gryffindor',
-      },
+      { house: 'Gryffindor' },
     ];
     const outputSlyt = [
-      {
-        name: 'Draco Malfoy',
-        house: 'Slytherin',
-      },
+      { house: 'Slytherin' },
     ];
     const outputHuff = [
-      {
-        name: 'Cedric Diggory',
-        house: 'Hufflepuff',
-      },
+      { house: 'Hufflepuff' },
     ];
     const outputRave = [
-      {
-        name: 'Cho Chang',
-        house: 'Ravenclaw',
-      },
+      { house: 'Ravenclaw' },
     ];
     expect(filterPotterHouse(input, 'Gryffindor')).toEqual(outputGryf);
     expect(filterPotterHouse(input, 'Slytherin')).toEqual(outputSlyt);
@@ -270,29 +179,14 @@ describe('filterSpells', () => {
 
   it('es una función que filtra solo personajes con patronus', () => {
     const input = [
-      {
-        name: 'Harry Potter',
-        patronus: 'stag',
-      },
-      {
-        name: 'Hermione Granger',
-        patronus: 'otter',
-      },
-      {
-        name: 'Draco Malfoy',
-        patronus: '',
-      },
+      { patronus: 'stag' },
+      { patronus: 'otter' },
+      { patronus: '' },
     ];
 
     const output = [
-      {
-        name: 'Harry Potter',
-        patronus: 'stag',
-      },
-      {
-        name: 'Hermione Granger',
-        patronus: 'otter',
-      },
+      { patronus: 'stag' },
+      { patronus: 'otter' },
     ];
 
     expect(filterSpells(input)).toEqual(output);

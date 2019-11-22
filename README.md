@@ -2,14 +2,11 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Parte adicional-opcional (extensión)](#6-parte-adicional-opcional-extensión)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. Descripción del proyecto](#1-preámbulo)
+* [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
+* [3. Historias de usuario](#3-resumen-del-proyecto)
+* [4. Diseños de interfaz](#4-consideraciones-generales)
+* [5. Criterios de aceptación y definición de terminado](#5-criterios-de-aceptación-mínimos-del-proyecto)
 
 ***
 

@@ -68,7 +68,7 @@ HPLogoAlterno.addEventListener('click', () => {
 });
 
 // Fumción que crea los flip cards de personajes
-function showPotterCharacters(data) {
+const showPotterCharacters = (data) => {
   let templatePotter = '';
   data.map((obj) => {
     templatePotter += `
@@ -96,7 +96,7 @@ function showPotterCharacters(data) {
     return templatePotter;
   });
   return templatePotter;
-}
+};
 
 insertPotterCharacter.innerHTML = showPotterCharacters(POTTER);
 
@@ -298,7 +298,7 @@ wandsMenu.addEventListener('click', () => {
   document.querySelector('#insertWands').innerHTML = characterWands(arrWands);
 });
 
-function showPotterSpells(file) {
+const showPotterSpells = (file) => {
   let templateSpellsPotter = '';
   file.map((obj) => {
     templateSpellsPotter += `
@@ -312,7 +312,7 @@ function showPotterSpells(file) {
     return templateSpellsPotter;
   });
   return templateSpellsPotter;
-}
+};
 
 filterPotterSpells.addEventListener('click', () => {
   principalContainer.classList.add('hide');
