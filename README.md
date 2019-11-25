@@ -117,7 +117,7 @@ Para visualizar el prototipo mobile detallado, dar click [aqui](http://bit.ly/pr
 
 * Prototipo Alta Fidelidad Desktop
 
-![desktop alta](src\img\PrototipoAltaFidelidad.png)
+![desktop alta](src/img/PrototipoAltaFidelidad.png)
 
 Para visualizar el prototipo de alta fidelidad detallado, dar click [aqui](https://www.figma.com/file/VDEwkz4G4OFKzweit4jeAk/Harry-Potter-Project?node-id=0%3A1)
 
