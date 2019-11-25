@@ -22,11 +22,6 @@
 * Caracteristicas de su varita.
 * Que tipo de Patronus tiene.
 
-
-<!--
-\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).  -->
-
 ***
 
 ## 2. Objetivos de aprendizaje
