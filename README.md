@@ -103,13 +103,13 @@ Harry Potter World esta dirigido a personas que deseen conocer mas sobre el mund
 
 * Prototipo Baja Fidelidad Desktop
 
-![desktop](src\img\PrototipoBajaFidelidad.png)
+![desktop](src/img/PrototipoBajaFidelidad.png)
 
 Para visualizar el prototipo detallado, dar click [aqui](http://bit.ly/prototipoDesktop)
 
 * Prototipo Baja Fidelidad Mobile
 
-![mobile](src\img\PrototipoBajaFidelidadMobile.png)
+![mobile](src/img/PrototipoBajaFidelidadMobile.png)
 
 Para visualizar el prototipo mobile detallado, dar click [aqui](http://bit.ly/prototipoMobile)
 
@@ -123,7 +123,7 @@ Para visualizar el prototipo de alta fidelidad detallado, dar click [aqui](https
 
 * Prototipo Alta Fidelidad Mobile
 
-![mobile alta](src\img\PrototipoAltaFidelidadMobile.png)
+![mobile alta](src/img/PrototipoAltaFidelidadMobile.png)
 
 Para visualizar el prototipo de alta fidelidad mobile detallado, dar click [aqui](https://www.figma.com/proto/VDEwkz4G4OFKzweit4jeAk/Harry-Potter-Project?node-id=19%3A72&viewport=293%2C646%2C0.25&scaling=scale-down)
 
