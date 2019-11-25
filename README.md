@@ -15,7 +15,7 @@
 
 ![logo](src/img/ProyectoNombre.png)
 
-"Harry Potter World" es una web app que te ayudara a conocer todos los datos necesarios del mundo magico para que puedas jugar Harry Potter: Wizards Unite. En esta web app podras conocer datos importantes de tu personaje favorito, como: 
+"Harry Potter World" es una web app que te ayudara a conocer todos los datos necesarios del mundo magico para que puedas jugar Harry Potter: Wizards Unite. En esta web app podras conocer datos importantes de tu personaje favorito, como:
 
 * Casa de Hogarwts a la que pertenece.
 * Ocupacion en el mundo magico.
@@ -23,7 +23,7 @@
 * Que tipo de Patronus tiene.
 
 
-<!-- 
+<!--
 \* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
 y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).  -->
 
@@ -106,57 +106,32 @@ Harry Potter World esta dirigido a personas que deseen conocer mas sobre el mund
 
 ### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+* Prototipo Baja Fidelidad Desktop
+
+![desktop](src\img\PrototipoBajaFidelidad.png)
+
+Para visualizar el prototipo detallado, dar click [aqui](http://bit.ly/prototipoDesktop)
+
+* Prototipo Baja Fidelidad Mobile
+
+![mobile](src\img\PrototipoBajaFidelidadMobile.png)
+
+Para visualizar el prototipo mobile detallado, dar click [aqui](http://bit.ly/prototipoMobile)
 
 ### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
-[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
-correspondiente a cada set de datos que elijas.
+* Prototipo Alta Fidelidad Desktop
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+![desktop alta](src\img\PrototipoAltaFidelidad.png)
 
-#### Testeos de usabilidad
+Para visualizar el prototipo de alta fidelidad detallado, dar click [aqui](https://www.figma.com/file/VDEwkz4G4OFKzweit4jeAk/Harry-Potter-Project?node-id=0%3A1)
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+* Prototipo Alta Fidelidad Mobile
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+![mobile alta](src\img\PrototipoAltaFidelidadMobile.png)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-No tienes tiempo ilimitado para trabajar, así es que deberás priorizar.
+Para visualizar el prototipo de alta fidelidad mobile detallado, dar click [aqui](https://www.figma.com/proto/VDEwkz4G4OFKzweit4jeAk/Harry-Potter-Project?node-id=19%3A72&viewport=293%2C646%2C0.25&scaling=scale-down)
 
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita. <!--filtrar y ordenar la data.-->
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones que tenga tu código. <!--encargadas de  _procesar_, _filtrar_ y _ordenar_ la data, así como _calcular_
-estadísticas.-->
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
 ***
 ## 6. Proyecto Final
 
@@ -166,5 +141,5 @@ en la sección de [Consideraciones técnicas](#srcdatajs).
 ### Vista tablet
 ![tablet](src/img/tablet.png)
 
-### Vista mobile 
+### Vista mobile
 ![mobile1](src/img/mobile.jpg)
