@@ -7,30 +7,27 @@
 * [3. Definición de usuario](#3-definición-de-usuario)
 * [4. Historias de usuario y planificación de proyecto](#4-historias-de-usuario-y-planificación-de-proyecto)
 * [5. Diseño de Interfaz de Usuario](#5-diseño-de-interfaz-de-usuario)
+* [6. Proyecto Final](#6-proyecto-final)
 ***
 
 ## 1. Descripción del proyecto
 
-![proyecto](src/img/proyectofinal.png)
+
+![logo](src/img/ProyectoNombre.png)
+
+"Harry Potter World" es una web app que te ayudara a conocer todos los datos necesarios del mundo magico para que puedas jugar Harry Potter: Wizards Unite. En esta web app podras conocer datos importantes de tu personaje favorito, como: 
+
+* Casa de Hogarwts a la que pertenece.
+* Ocupacion en el mundo magico.
+* Caracteristicas de su varita.
+* Que tipo de Patronus tiene.
 
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
-para el usuario.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
+<!-- 
 \* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).  -->
+
+***
 
 ## 2. Objetivos de aprendizaje
 
@@ -78,29 +75,14 @@ y la interfaz construida en este [link](https://app.talento.laboratoria.la/profi
 - [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](/lol/README.md)
-
-* [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
-  respectivas características mencionadas en la serie de novelas de Harry Potter
-  escrita por la autora británica J.K.Rowling.
-  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
 ***
 
 ## 3. Definición de usuario
 
+Harry Potter World esta dirigido a personas que deseen conocer mas sobre el mundo magico (primordialmente principantes) y que deseen aventurarse a jugar [Harry Potter: Wizards Unite](https://www.wizardingworld.com).
 
 ***
+
 ## 4. Historias de usuario y planificación de proyecto
 
 * **HISTORIA 1 :** Yo como usuario quiero "ver a todos los personajes y saber sus características".
@@ -175,3 +157,14 @@ Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
 (_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
 en la sección de [Consideraciones técnicas](#srcdatajs).
+***
+## 6. Proyecto Final
+
+### Vista desktop
+![desktop](src/img/proyectofinal.png)
+
+### Vista tablet
+![tablet](src/img/tablet.png)
+
+### Vista mobile 
+![mobile1](src/img/mobile.jpg)
