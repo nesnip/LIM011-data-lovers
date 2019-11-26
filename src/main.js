@@ -70,7 +70,7 @@ HPLogoAlterno.addEventListener('click', () => {
 // Fumción que crea los flip cards de personajes
 const showPotterCharacters = (data) => {
   let templatePotter = '';
-  data.map((obj) => {
+  data.forEach((obj) => {
     templatePotter += `
     <div class="card flex-container flip-card">
       <div class="flip-card-inner">
@@ -93,7 +93,6 @@ const showPotterCharacters = (data) => {
         </div>
       </div>
     </div>`;
-    return templatePotter;
   });
   return templatePotter;
 };
@@ -165,7 +164,6 @@ text.addEventListener('keyup', () => {
   potterRavenclaw.classList.add('hide');
   potterSpells.classList.add('hide');
   wandsContainer.classList.add('hide');
-
   const arrSearchCharacter = searchCharacters(POTTER, text.value);
   if (arrSearchCharacter.length > 0) {
     searchResults.innerHTML = showPotterCharacters(arrSearchCharacter);
