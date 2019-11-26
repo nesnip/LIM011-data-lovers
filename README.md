@@ -48,7 +48,7 @@
 
 ### Javascript
 
-- [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
+- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [ ] Entender el uso de bucles (`for` | `forEach`).
@@ -66,8 +66,8 @@
 - [X] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [X] Organizar y dividir el código en módulos (Modularización).
+- [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ***
